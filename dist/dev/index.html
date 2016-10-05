@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <base href="/">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Welcome to angular2-seed!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- inject:css -->
-  <link rel="stylesheet" href="/css/main.css?1475654368081">
-  <link rel="stylesheet" href="/scss/style.css?1475654368085">
-  <!-- endinject -->
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        Welcome to angular2-seed!
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/main.css?1475657211355">
+    <link rel="stylesheet" href="/scss/style.css?1475657211356">
+    <!-- endinject -->
 </head>
+
 <body>
 
-  <sd-app>Loading...</sd-app>
+    <a2-app>Loading...</a2-app>
 
-  <script>
-  // Fixes undefined module function in SystemJS bundle
-  function module() {}
-  </script>
+    <script>
+        // Fixes undefined module function in SystemJS bundle
+        function module() {}
+    </script>
 
-  <!-- shims:js -->
-  <script src="/node_modules/core-js/client/shim.min.js?1475654368070"></script>
-  <script src="/node_modules/systemjs/dist/system.src.js?1475654368073"></script>
-  <!-- endinject -->
+    <!-- shims:js -->
+    <script src="/node_modules/core-js/client/shim.min.js?1475657211347"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js?1475657211349"></script>
+    <!-- endinject -->
 
-  
-  <script src="/app/system-config.js"></script>
-  
+    
+        <script src="/app/system-config.js"></script>
+        
 
-  <!-- libs:js -->
-  <script src="/node_modules/zone.js/dist/zone.js?1475654368077"></script>
-  <script src="/node_modules/.tmp/Rx.min.js?1475654368079"></script>
-  <!-- endinject -->
+            <!-- libs:js -->
+            <script src="/node_modules/zone.js/dist/zone.js?1475657211351"></script>
+            <script src="/node_modules/.tmp/Rx.min.js?1475657211352"></script>
+            <!-- endinject -->
 
-  <!-- inject:js -->
-  <!-- endinject -->
+            <!-- inject:js -->
+            <!-- endinject -->
 
-  
-  <script>
-  System.import('app/main')
-    .catch(function (e) {
-      console.error(e,
-        'Report this error at https://github.com/mgechev/angular2-seed/issues');
-    });
-  </script>
-  
+            
+                <script>
+                    System.import('app/main')
+                        .catch(function(e) {
+                            console.error(e,
+                                'Report this error at https://github.com/mgechev/angular2-seed/issues');
+                        });
+                </script>
+                
 
 </body>
+
 </html>

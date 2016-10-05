@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/index';
+import { StepsComponent } from './components/steps/index';
 import { NavbarComponent } from './navbar/index';
 import { NameListService } from './name-list/index';
 import { ContribService } from './services/index';
@@ -14,9 +15,9 @@ import { ContribService } from './services/index';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [HeaderComponent, NavbarComponent],
+  declarations: [HeaderComponent, NavbarComponent, StepsComponent],
   exports: [HeaderComponent, NavbarComponent,
-    CommonModule, FormsModule, RouterModule]
+    CommonModule, FormsModule, RouterModule, StepsComponent]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

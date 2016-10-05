@@ -4,14 +4,12 @@ import { Observable } from 'rxjs/Rx';
 // import { NgClass } from '@angular/common';
 
 import { Constants } from '../shared/constants/index';
-// import { StepsComponent } from '../shared/components/index';
 
 @Component({
     selector: 'app-pomodoro',
     moduleId: module.id,
     templateUrl: './pomodoro.html',
-    styleUrls: ['./pomodoro.css'],
-    // directives: [StepsComponent]
+    styleUrls: ['./pomodoro.css']
 })
 
 export class PomodoroComponent implements OnInit {
@@ -19,7 +17,7 @@ export class PomodoroComponent implements OnInit {
     private _contadorInterval: number = 0;
     private _timeSelected: number = 0.1;
 
-    public steps: Object[];
+    steps: Object[];
     public actualStep: Object;
     public urlImg: String;
     public isEnabledStart: boolean = true;

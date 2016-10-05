@@ -7,8 +7,7 @@ import { Constants } from '../../constants/index';
     selector: 'app-header',
     moduleId: module.id,
     templateUrl: './header.html',
-    styleUrls: ['./header.css'],
-    providers: [ContribService]
+    styleUrls: ['./header.css']
 })
 export class HeaderComponent implements OnInit {
     public headerContent: Object;
