@@ -53,7 +53,7 @@ header#mainHeader {
       @media (min-width: 768px) {
         header#mainHeader .container #logo {
           float: left;
-          height: 120px; }
+          height: 95px; }
           header#mainHeader .container #logo img {
             margin-top: 0; } }
       header#mainHeader .container #logo:hover {

@@ -1,5 +1,5 @@
-@import '../../../../scss/vars';
-@import '../../../../scss/core/mixins/flex';
+@import '../../../scss/vars';
+@import '../../../scss/core/mixins/flex';
 .steps {
     text-align: center;
     margin: 4rem auto 2rem;
@@ -26,7 +26,7 @@
         border-top: 8px solid #e6e6e6;
         display: table-cell;
         vertical-align: top;
-        > div.text {
+        >div.text {
             position: absolute;
             text-align: center;
             display: none;
@@ -68,7 +68,7 @@
             right: auto;
         }
     }
-    > .text {
+    >.text {
         color: $color-gray;
         font-size: 25px;
         text-align: center;
@@ -80,7 +80,7 @@
             min-height: 70px;
         }
         li {
-            > div.text {
+            >div.text {
                 display: block;
                 right: 0;
                 width: 100%;
@@ -89,7 +89,7 @@
     }
     @media only screen and (min-width: $screen-md) {
         li {
-            > div.text {
+            >div.text {
                 display: block;
                 right: 0;
                 width: 100%;

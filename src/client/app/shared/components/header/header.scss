@@ -1,6 +1,5 @@
 @import '../../../../scss/vars';
 @import '../../../../scss/core/mixins/flex';
-
 header#mainHeader {
     border-bottom: 1px solid #e5e5e5;
     .phone-mobile {
@@ -79,7 +78,7 @@ header#mainHeader {
             }
             @media (min-width: $screen-sm) {
                 float: left;
-                height: 120px;
+                height: 95px;
                 img {
                     margin-top: 0;
                 }

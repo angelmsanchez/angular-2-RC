@@ -6,8 +6,8 @@ import { Observable } from 'rxjs/Rx';
 import { Constants } from '../shared/constants/index';
 
 @Component({
-    selector: 'app-pomodoro',
     moduleId: module.id,
+    selector: 'app-pomodoro',
     templateUrl: './pomodoro.html',
     styleUrls: ['./pomodoro.css']
 })
