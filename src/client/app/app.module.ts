@@ -6,13 +6,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
+import { FilmModule } from './film/film.module';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AboutModule, HomeModule, SharedModule.forRoot(), PomodoroModule],
+  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), HomeModule, SharedModule.forRoot(), PomodoroModule, FilmModule],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

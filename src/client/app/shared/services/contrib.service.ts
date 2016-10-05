@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 // import { Observable } from 'rxjs/Observable';
 
+import { Config } from '../config/index';
+
 @Injectable()
 export class ContribService {
   // private _cache: Object = {};
@@ -26,7 +28,7 @@ export class ContribService {
 
   getContrib(endPoint: string) {
     return this.http
-      .get('http://localhost:4444/' + endPoint)
+      .get(Config.API + endPoint)
       .map(response => response.json());
   }
 

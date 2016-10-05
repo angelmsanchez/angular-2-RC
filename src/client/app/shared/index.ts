@@ -4,4 +4,4 @@
 export * from './name-list/index';
 export * from './navbar/index';
 export * from './components/index';
-export * from './config/env.config';
+export * from './config/index';
