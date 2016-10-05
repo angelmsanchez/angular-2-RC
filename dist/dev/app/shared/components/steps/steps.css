@@ -1,0 +1,76 @@
+.steps {
+  text-align: center;
+  margin: 4rem auto 2rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  max-width: 1050px; }
+  .steps * {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  .steps .dots {
+    display: table;
+    width: 100%; }
+  .steps ol {
+    width: 100%;
+    display: table-row; }
+  .steps li {
+    width: 100px;
+    padding-top: 1.5em;
+    border-top: 8px solid #e6e6e6;
+    display: table-cell;
+    vertical-align: top; }
+    .steps li > div.text {
+      position: absolute;
+      text-align: center;
+      display: none; }
+      .steps li > div.text.active {
+        font-size: 25px; }
+  .steps li:nth-child(odd) {
+    color: #ff0000; }
+  .steps li.active,
+  .steps li.offoff {
+    border-color: #77ca2d; }
+  .steps li.offoff {
+    color: #000000; }
+  .steps li.active span,
+  .steps li.offoff span {
+    background-color: #77ca2d;
+    z-index: 1; }
+  .steps li span {
+    display: block;
+    position: absolute;
+    top: -14px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #e6e6e6; }
+    .steps li span:first-child {
+      right: -10px;
+      left: auto; }
+    .steps li span:last-child {
+      position: absolute;
+      left: -1px;
+      right: auto; }
+  .steps > .text {
+    color: #55595c;
+    font-size: 25px;
+    text-align: center;
+    padding-left: calc(calculateRem(50px, 16px) - calculateRem(50px, 16px));
+    padding-right: calc(calculateRem(50px, 16px) - calculateRem(50px, 16px)); }
+  @media only screen and (min-width: 768px) {
+    .steps .dots {
+      min-height: 70px; }
+    .steps li > div.text {
+      display: block;
+      right: 0;
+      width: 100%; } }
+  @media only screen and (min-width: 992px) {
+    .steps li > div.text {
+      display: block;
+      right: 0;
+      width: 100%; } }
+  @media print {
+    .steps {
+      display: none; } }

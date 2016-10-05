@@ -1,0 +1,25 @@
+// /* flexbox */
+// .flex {
+//     display: flex;
+//
+//     &.flex-center {
+//         justify-content: center;
+//         align-items: center;
+//     }
+//
+//     &.flex-start-center {
+//         justify-content: flex-start;
+//         align-items: center;
+//     }
+//
+//     &.flex-end-center {
+//         justify-content: flex-end;
+//         align-items: center;
+//     }
+// }
+
+@mixin flex($justifyContent) {
+    display:flex;
+    align-items: center;
+    justify-content: $justifyContent;
+}

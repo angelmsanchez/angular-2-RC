@@ -1,0 +1,39 @@
+/* group icon */
+.group-icon {
+    .icon-wrapper {
+        margin: 0.5rem;
+
+        i {
+            display: block;
+            font-size: 1.25rem;
+            padding: 0.5rem;
+        }
+
+    }
+
+    &.group-without-space {
+        .icon-wrapper {
+            margin: 0;
+
+            i {
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    }
+
+    &.horizontal {
+        @include flex(flex-start);  // @include flex(center)
+
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &.vertical {
+        > div {
+            display: block;
+            text-align: center;
+        }
+    }
+}

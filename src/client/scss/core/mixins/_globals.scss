@@ -1,0 +1,37 @@
+@mixin centerBodyContent {
+    max-width: $maxwidth-bodycontent;
+    margin:0 auto;
+}
+
+@mixin icon-text-vertical-align ($btn: false) {
+    span, i {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: initial;
+    }
+
+    i {
+        padding-left: $space-sm;
+        padding-right: $space-sm;
+        vertical-align: -3px;
+    }
+    // @if $btn {
+        &.btn-icon {
+            i {
+                vertical-align: -4px;
+            }
+
+            i:first-child {
+                margin-left: -$space-md;
+                padding-right: $space-md;
+                padding-left: 0;
+            }
+
+            i:last-child {
+                margin-right: -$space-md;
+                padding-left: $space-md;
+                padding-right: 0;
+            }
+        }
+    // }
+}

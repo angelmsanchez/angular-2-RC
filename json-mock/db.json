@@ -1,0 +1,368 @@
+{
+    "home": {
+        "textContent": {
+            "title": "Seguros de salud",
+            "subtitle": "contratación online de Seguros Médicos Sanitas"
+        },
+        "promoHeader": {
+            "img": "../../assets/img/picture-home-01.jpg",
+            "title": "Seguros a tu medida",
+            "subtitle": "Encuentra el seguro que mejor se adapte a tus necesidades",
+            "linkText": "Catálogo de productos personalizado",
+            "linkUrl": "http://www.sanitas.es"
+        },
+        "promoImgDown": {
+            "img": "../../assets/img/blua-ipad.png",
+            "title": "Llévate una Samsung Galaxy Tab 2 con tu seguro más digital",
+            "subtitle": "Si lo que buscas es la libertad de tener a tu médico online, tramitar tus gestiones en cuestión de minutos y control sobre tus informes y documentos médicos. Blua es tu seguro.",
+            "linkText": "Conoce más sobre Blua",
+            "linkUrl": "http://www.sanitas.es"
+        },
+        "promoImgBackground": {
+            "img": "../../assets/img/consultant-online-01.png",
+            "title": "¿No sabes qué seguro se adapta a tí?",
+            "subtitle": "Te asesoramos online",
+            "linkText": "Empezar",
+            "linkUrl": "http://www.sanitas.es"
+        },
+        "promoImgLeft": {
+            "img": "../../assets/img/offer-01.jpg",
+            "title": "Aprovecha ahora la promoción de dos meses ¡Gratis!",
+            "subtitle": "Contrata este mes tu producto Sanitas Mundi, Sanitas Primero y Sanitas más salud y te beneficiarás de dos meses totalmente ¡Gratis!",
+            "linkText": "Aprovechar esta oferta",
+            "linkUrl": "http://www.sanitas.es"
+        },
+        "promoFooter": {
+            "title": "¡Con Sanitas gestiona tu salud de la forma más digital!",
+            "features": [{
+                "icon": "icon-especialista-videoconsulta",
+                "title": "Médico online",
+                "subtitle": "Resuelve tus dudas con un médico de Sanitas",
+                "linkUrl": "http://www.sanitas.es"
+            }, {
+                "icon": "icon-app-sanitas",
+                "title": "Tarjeta digital",
+                "subtitle": "Ya puedes ir al médico sin la tarjeta de Sanitas",
+                "linkUrl": "http://www.sanitas.es"
+            }, {
+                "icon": "icon-calendar",
+                "title": "Cita online",
+                "subtitle": "Consigue tu cita de forma rápida y sencilla",
+                "linkUrl": "http://www.sanitas.es"
+            }, {
+                "icon": "icon-document-01",
+                "title": "Información de salud",
+                "subtitle": "Tus resultados de pruebas médicas siempre disponibles",
+                "linkUrl": "http://www.sanitas.es"
+            }]
+        }
+    },
+    "digitalsales": [{
+        "id": "validate",
+        "value": "true"
+    }],
+    "comun": {
+        "headerContent": {
+            "phoneTitle": "Angular 2",
+            "schelude": "L-J de 9 a 21h / V de 9 a 20h",
+            "help": "Dudas Frecuentes",
+            "urlHelp": "https://angular.io/docs/ts/latest/cheatsheet.html",
+            "textPhome": "Te llamamos"
+        },
+        "helpInfo": {
+            "title": "¿Ya eres cliente de Sanitas?",
+            "subtitle": "Te ayudamos",
+            "url": "https://www.sanitas.es/cparticulares/contratacion/contenido/dudas"
+        },
+        "modalMessage": {
+            "title": "Te llamaremos lo antes posible",
+            "subtitle": "Intentaremos llamarte lo antes posible dentro de nuestro horario de Lunes a Viernes de 9 a 21"
+        },
+        "modalForm": {
+            "title": "Te llamamos",
+            "subtitle": "Dejanos tus datos y te llamamos pronto",
+            "schelude": "",
+            "terms": "He leído y acepto la política de privacidad",
+            "urlTerms": "http://www.angular.io",
+            "url": "http://www.angular.io"
+        }
+    },
+    "catalogo": {
+        "textContent": {
+            "title": "Todas tus opciones",
+            "subtitle": "Este es tu catálogo de productos Sanitas"
+        },
+        "infoContent": {
+            "title": "A tener en cuenta",
+            "text": "<p>\r\n\tLa opci&oacute;n de copago es interesante para aquellos que no van m&aacute;s de 2 o 3 veces al m&eacute;dico porque su prima es m&aacute;s baja y s&oacute;lo pagan de 3 a 10 euros cuando visitan a su m&eacute;dico.</p>\r\n<p>\r\n\tLa opci&oacute;n de reembolso es interesante para aquellos que quieran acudir a cualquier m&eacute;dico del mundo de forma adicional a los 40.000 m&eacute;dicos del Cuadro M&eacute;dico de sanitas.</p>\r\n"
+        },
+        "productsList": [{
+            "planId": "111",
+            "title": "Santias más 90.000",
+            "img": "../../assets/img/chica-deporte/05.jpg",
+            "advantage": "¡2 meses Gratis!",
+            "text": "Cuenta con la prima más económica y una estructura de copagos ligeramente superiores",
+            "productUrl": "http://www.sanitas.es/sanitas/seguros/es/particulares/seguros_medicos/cuadro_medico/sanitas-mas-90/resumen/index.html",
+            "contrataUrl": "",
+            "ownUrl": "",
+            "filtroCopagos": "0",
+            "filtroReembolsos": "0",
+            "filtroAutonomos": "1",
+            "icons": [{
+                "icon": "icon-family",
+                "title": "Familia con hijos / sin hijos"
+            }, {
+                "icon": "icon-arrow-back",
+                "title": "Reembolso"
+            }, {
+                "icon": "icon-singles",
+                "title": "Solteros"
+            }],
+            "featuresCompare": [{
+                "title": "Promociones",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Pruebas diagnósticas",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cirugía + hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cobertura Dental",
+                "included": "0",
+                "complementId": ""
+            }, {
+                "title": "Hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos farmacia",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos médicos",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Ayuda económica por hospitalización",
+                "included": "1",
+                "complementId": ""
+            }],
+            "copagos": "Copagos",
+            "downloadText": "Descargar Ficha",
+            "downloadUrl": "http://slvnisa01.sanitas.dom:2015/cparticulares/media/cont/documento/documento-catalogo/guias_medicas_4_22_3.pdf"
+        }, {
+            "planId": "222",
+            "title": "Santias Oro",
+            "img": "../../assets/img/chica-avion/07.jpg",
+            "advantage": "¡2 meses Gratis!",
+            "text": "Cuenta con la prima más económica y una estructura de copagos ligeramente superiores",
+            "productUrl": "http://www.sanitas.es/sanitas/seguros/es/particulares/seguros_medicos/cuadro_medico/otros_seguros/sanitas-oro/resumen/index.html",
+            "contrataUrl": "",
+            "ownUrl": "",
+            "filtroCopagos": "0",
+            "filtroReembolsos": "0",
+            "filtroAutonomos": "1",
+            "icons": [{
+                "icon": "icon-family",
+                "title": "Familia con hijos / sin hijos"
+            }, {
+                "icon": "icon-arrow-back",
+                "title": "Reembolso"
+            }, {
+                "icon": "icon-singles",
+                "title": "Solteros"
+            }],
+            "featuresCompare": [{
+                "title": "Promociones",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Pruebas diagnósticas",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cirugía + hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cobertura Dental",
+                "included": "0",
+                "complementId": ""
+            }, {
+                "title": "Hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos farmacia",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos médicos",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Ayuda económica por hospitalización",
+                "included": "1",
+                "complementId": ""
+            }],
+            "copagos": "Copagos",
+            "downloadText": "Descargar Ficha",
+            "downloadUrl": "http://slvnisa01.sanitas.dom:2015/cparticulares/media/cont/documento/documento-catalogo/guias_medicas_4_22_3.pdf"
+        }, {
+            "planId": "333",
+            "title": "Sanitas Profesionales",
+            "img": "../../assets/img/madre-e-hijo-en-autobus/01.jpg",
+            "advantage": "¡2 meses Gratis!",
+            "text": "Cuenta con la prima más económica y una estructura de copagos ligeramente superiores",
+            "productUrl": "http://www.sanitas.es/sanitas/seguros/es/particulares/seguros_medicos/cuadro_medico/sanitas-profesionales/resumen/index.html",
+            "contrataUrl": "",
+            "ownUrl": "",
+            "filtroCopagos": "0",
+            "filtroReembolsos": "0",
+            "filtroAutonomos": "1",
+            "icons": [{
+                "icon": "icon-family",
+                "title": "Familia con hijos / sin hijos"
+            }, {
+                "icon": "icon-arrow-back",
+                "title": "Reembolso"
+            }, {
+                "icon": "icon-singles",
+                "title": "Solteros"
+            }],
+            "featuresCompare": [{
+                "title": "Promociones",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Pruebas diagnósticas",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cirugía + hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cobertura Dental",
+                "included": "0",
+                "complementId": ""
+            }, {
+                "title": "Hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos farmacia",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos médicos",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Ayuda económica por hospitalización",
+                "included": "1",
+                "complementId": ""
+            }],
+            "copagos": "Copagos",
+            "downloadText": "Descargar Ficha",
+            "downloadUrl": "http://slvnisa01.sanitas.dom:2015/cparticulares/media/cont/documento/documento-catalogo/guias_medicas_4_22_3.pdf"
+        }, {
+            "planId": "333",
+            "title": "Sanitas Premium 500.000",
+            "img": "../../assets/img/mujer-yoga/02.jpg",
+            "advantage": "¡2 meses Gratis!",
+            "text": "Cuenta con la prima más económica y una estructura de copagos ligeramente superiores",
+            "productUrl": "http://www.sanitas.es/sanitas/seguros/es/particulares/seguros_medicos/cuadro_medico/sanitas-premium-500/resumen/index.html",
+            "contrataUrl": "",
+            "ownUrl": "",
+            "filtroCopagos": "0",
+            "filtroReembolsos": "0",
+            "filtroAutonomos": "1",
+            "icons": [{
+                "icon": "icon-family",
+                "title": "Familia con hijos / sin hijos"
+            }, {
+                "icon": "icon-singles",
+                "title": "Solteros"
+            }],
+            "featuresCompare": [{
+                "title": "Promociones",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Pruebas diagnósticas",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cirugía + hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Cobertura Dental",
+                "included": "0",
+                "complementId": ""
+            }, {
+                "title": "Hospitalización",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos farmacia",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Reembolso de gastos médicos",
+                "included": "1",
+                "complementId": ""
+            }, {
+                "title": "Ayuda económica por hospitalización",
+                "included": "1",
+                "complementId": ""
+            }],
+            "copagos": "Copagos",
+            "downloadText": "Descargar Ficha",
+            "downloadUrl": "http://slvnisa01.sanitas.dom:2015/cparticulares/media/cont/documento/documento-catalogo/guias_medicas_4_22_3.pdf"
+        }],
+        "globalIcons": [{
+            "icon": "icon-family",
+            "title": "Familia con hijos / sin hijos"
+        }, {
+            "icon": "icon-singles",
+            "title": "Solteros"
+        }, {
+            "icon": "icon-nocopayment",
+            "title": "Visitas frecuentes al médico(Sin copago)"
+        }, {
+            "icon": "icon-arrow-back",
+            "title": "Reembolso"
+        }, {
+            "icon": "icon-professional",
+            "title": "Profesionales (autónomos)"
+        }, {
+            "icon": "icon-airplane",
+            "title": "Viajes / internacional"
+        }],
+        "module360": {
+            "title": "Compara tus opciones más interesantes",
+            "subtitle": "De entre los seguros que has seleccionado"
+        },
+        "promotion360": {
+            "title": "*Promocion regalo Samsung Galaxy Tab 4",
+            "subtitle": "Consultas aquí todas las bases de la promocion",
+            "url": "http://www.sanitas.es"
+        },
+        "url360": [{
+            "title": "Informacion de carencias",
+            "url": "http://www.santias.es"
+        }, {
+            "title": "Informacion de reembolsos",
+            "url": "http://www.santias.es"
+        }, {
+            "title": "Informacion de preexistencias",
+            "url": "http://www.santias.es"
+        }]
+    }
+}

@@ -1,0 +1,6 @@
+@mixin background-properties($repeat: no-repeat, $position: center 0, $color: transparent, $size: cover)  {
+    background-repeat: $repeat;
+    background-position: $position;
+    background-color: $color;
+    background-size: $size;
+}

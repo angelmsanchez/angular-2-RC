@@ -1,0 +1,46 @@
+<section>
+
+    <div>
+        <p class="headerText" [ngClass]="{'active': isPair}">
+            <span>Intervalo de </span>
+            <span *ngIf="!isPair">Concentración</span>
+            <span *ngIf="isPair">Descanso</span>
+        </p>
+        <!--<app-steps [steps]="steps" [actualStep]="actualStep"></app-steps>-->
+    </div>
+
+    <div class="dropdown" dropdown>
+        <button [disabled]="!isEnabledStart" type="button" class="btn" dropdownToggle>
+            {{ unitTime }}<span class="caret"></span>
+          </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+            <li role="menuitem"><a class="dropdown-item" (click)="selectTime(0.1, 'Milisegundos')">Milisegundos</a></li>
+            <li role="menuitem"><a class="dropdown-item" (click)="selectTime(10, 'Segundos')">Segundos</a></li>
+            <li role="menuitem"><a class="dropdown-item" (click)="selectTime(1000, 'Minutos')">Minutos</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="box image">
+            <img src="{{urlImg}}/pomodoro.png" alt="Pomodoro" height="220px" width="220px" />
+        </div>
+        <div class="box clock">
+            <p class="contador" [ngClass]="{'active': isPair}">
+                {{ contadorMin }} : {{ contadorSec }}
+            </p>
+            <button class="button-start" (click)="playPomodoro()" type="button" name="button">
+                <img *ngIf="isEnabledStart" src="{{urlImg}}/play-button.png" alt="Empezar"/>
+            </button>
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>Descripcion Pomodoro</h3>
+        <p>
+            La Tecnica Pomodoro es un metodo para mejorar la administracion del tiempo desarrollado por Francesco Cirillo a fines de los 1980.1 La tecnica usa un reloj para dividir el tiempo dedicado a un trabajo en intervalos de 25 minutos -llamados 'pomodoros'-
+            separados por pausas. Relacionado con conceptos como timeboxing y desarrollo iterativo e incremental, usados en el desarrollo de software, el metodo ha sido adoptado en contextos de desarrollo agil y Programacion en pareja (pair programming)
+            ademas de otros contextos de trabajo. El metodo se basa en la idea de que las pausas frecuentes pueden mejorar la agilidad mental,3 4 y trata de ofrecer una respuesta eficaz frente al tiempo, en lugar del estado de ansiedad que suele provocar
+            el "devenir" del tiempo, del que se habla en los escritos de Henri Bergson y Eugene Minkowski.
+        </p>
+    </div>
+</section>

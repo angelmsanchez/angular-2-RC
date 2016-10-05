@@ -1,0 +1,118 @@
+h1,
+h5 {
+    padding: 12px;
+}
+
+footer,
+header {
+    background: #ff001b;
+    color: white;
+}
+
+header {
+    height: 10%;
+    h1 {
+        font-size: 30px;
+        padding: 15px;
+    }
+}
+
+footer {
+    text-align: right;
+    height: 6%;
+}
+
+section {
+    color: #77ca2d;
+    min-height: 80%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.headerText {
+    color: #ff001b;
+    font-size: 25px;
+    margin: 10px 0 -30px;
+}
+
+.active {
+    color: #77ca2d;
+}
+
+.dropdown {
+    ul {
+        margin: 0 25%;
+        @media screen and (min-width: 470px) {
+            margin: 0 40%;
+        }
+    }
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 740px;
+}
+
+.image {
+    margin-top: 25px;
+}
+
+.clock {
+    min-height: 150px;
+    color: #ff001b;
+    .contador {
+        font-size: 70px;
+        margin: 30px 0;
+    }
+    button {
+        border: none;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+.button-start {
+    background-color: white;
+    img {
+        background: white;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+}
+
+.description {
+    vertical-align: middle;
+    margin: 30px auto 10px;
+    max-width: 740px;
+    font-size: 14px;
+    h3 {
+        color: green;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    p {
+        color: #4aa94a;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (min-width:470px) {
+    .main {
+        min-height: 220px;
+    }
+    .box {
+        display: inline-block;
+        width: 50%;
+    }
+    .image {
+        float: left;
+    }
+    .clock {
+        margin-top: 35px;
+    }
+    .description {
+        margin: 50px auto 10px;
+    }
+}

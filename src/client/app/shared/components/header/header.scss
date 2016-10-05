@@ -1,0 +1,121 @@
+@import '../../../../scss/vars';
+@import '../../../../scss/core/mixins/flex';
+
+header#mainHeader {
+    border-bottom: 1px solid #e5e5e5;
+    .phone-mobile {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+        .icon-wrapper {
+            margin: 0;
+            i {
+                padding: 0;
+            }
+        }
+    }
+    .container {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: relative;
+        #mobile-nav {
+            left: 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            span {
+                background-color: $brand-primary;
+                display: block;
+                height: 5px;
+                margin-bottom: 4px;
+                width: 40px;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                &.nav-third {
+                    margin-bottom: 0;
+                }
+                &.nav-first,
+                &.nav-third {
+                    width: 30px;
+                }
+            }
+            &.hover,
+            &:hover {
+                cursor: pointer;
+                span {
+                    width: 30px;
+                    &.nav-second {
+                        opacity: 0;
+                    }
+                    &.nav-first {
+                        -moz-transform: rotate(45deg) translateX(5px) translateY(8px);
+                        -webkit-transform: rotate(45deg) translateX(5px) translateY(8px);
+                        -o-transform: rotate(45deg) translateX(5px) translateY(8px);
+                        -ms-transform: rotate(45deg) translateX(5px) translateY(8px);
+                        transform: rotate(45deg) translateX(5px) translateY(8px);
+                    }
+                    &.nav-third {
+                        -moz-transform: rotate(-45deg) translateX(5px) translateY(-7px);
+                        -webkit-transform: rotate(-45deg) translateX(5px) translateY(-7px);
+                        -o-transform: rotate(-45deg) translateX(5px) translateY(-7px);
+                        -ms-transform: rotate(-45deg) translateX(5px) translateY(-7px);
+                        transform: rotate(-45deg) translateX(5px) translateY(-7px);
+                    }
+                }
+            }
+        }
+        #logo {
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+            width: 90px;
+            margin: 0 auto;
+            display: block;
+            img {
+                margin-top: -125px;
+                width: 100%;
+            }
+            @media (min-width: $screen-sm) {
+                float: left;
+                height: 120px;
+                img {
+                    margin-top: 0;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .info-wrapper {
+            .help-info {
+                .group-icon {
+                    @include flex(flex-end);
+                    // @include flex(flex-start)
+                    .text-wrapper {
+                        .phone {
+                            font-size: 1.25rem;
+                            margin: 0.25rem 0;
+                        }
+                    }
+                }
+            }
+            .action-info {
+                margin-top: 1.5rem;
+                button {
+                    font-weight: bold;
+                    margin-left: 0.30rem;
+                    padding: 0.15rem 0.8rem;
+                    i {
+                        font-size: 1.5rem;
+                    }
+                    span {
+                        vertical-align: middle;
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+    }
+}

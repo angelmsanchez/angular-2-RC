@@ -1,0 +1,149 @@
+@mixin icon-variant($background, $border:"", $color:"") {
+    @if $color != "" {
+        color: $color;
+    }
+    @else {
+        color: $white;
+    }
+    background-color: $background;
+    @if $border != "" {
+        border-color: $border;
+    }
+    @else {
+        border-color: transparent;
+    }
+}
+
+@mixin icon-variant-hover($background, $border:"", $color:"", $background-hover:"") {
+    &.hover-darken {
+        &:focus,
+        &.focus,
+        &:hover,
+        &:active,
+        &.active {
+            @if $background != transparent {
+                color: $color;
+            }
+            @else {
+                color: darken($color, 10%);
+            }
+            @if $background-hover != "" {
+                background-color: $background-hover;
+            }
+            @else {
+                background-color: darken($background, 10%);
+            }
+            border-color: darken($border, 10%);
+        }
+    }
+    &.hover-lighten {
+        &:focus,
+        &.focus,
+        &:hover,
+        &:active,
+        &.active {
+            @if $background != transparent {
+                color: $color;
+            }
+            @else {
+                color: lighten($color, 10%);
+            }
+            @if $background-hover != "" {
+                background-color: $background-hover;
+            }
+            @else {
+                background-color: lighten($background, 10%);
+            }
+            border-color: lighten($border, 10%);
+        }
+    }
+}
+
+@mixin group-icon-vertical() {
+    text-align: center;
+    vertical-align: top;
+    width: 125px;
+
+    @media (min-width: $screen-sm) {
+        margin-bottom: 0;
+    }
+
+    .icon-wrapper {
+        margin: 0 auto $space-md;
+    }
+
+    span {
+        display: block;
+        font-weight: bold;
+        border-bottom: 4px solid transparent;
+        padding-bottom: $space-sm;
+
+        &.inverse {
+            @include icon-variant(transparent, transparent, $grayless);
+        }
+
+        span {
+            color: $brand-primary;
+            border: 0;
+            padding-bottom: 0;
+
+            &:last-child {
+                color: $black;
+                font-size: 0.95rem;
+            }
+        }
+    }
+
+    &[class*="hover"] {
+        &:hover {
+            .inverse {
+                @include icon-variant(transparent, $brand-primary, $brand-primary);
+            }
+        }
+    }
+
+    &[class*="active"] {
+        .inverse {
+            @include icon-variant(transparent, $brand-primary, $brand-primary);
+        }
+    }
+}
+
+@mixin group-icon-horizontal() {
+    .icon-wrapper {
+        vertical-align: middle;
+        // display: table-cell;
+        display: inline-flex;
+
+        i {
+            display: block;
+        }
+    }
+    span {
+        vertical-align: middle;
+        display: inline-block;
+
+        span {
+            display: block;
+            padding: 0 !important;
+        }
+    }
+
+    span:first-child {
+        padding-right: $space-sm;
+    }
+
+    span:last-child {
+        padding-left: $space-sm;
+    }
+
+    &.horizontal-component {
+        margin: 0 0 $space-md;
+        width: 100%;
+
+        @media (min-width: $screen-sm) {
+            margin: 0 $space-md;
+            width: auto;
+        }
+    }
+}

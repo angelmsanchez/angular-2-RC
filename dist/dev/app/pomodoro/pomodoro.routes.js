@@ -1,0 +1,10 @@
+"use strict";
+var index_1 = require('./index');
+exports.PomodoroRoutes = [
+    {
+        path: 'pomodoro',
+        component: index_1.PomodoroComponent
+    }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9wb21vZG9yby9wb21vZG9yby5yb3V0ZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUVBLHNCQUFrQyxTQUFTLENBQUMsQ0FBQTtBQUUvQixzQkFBYyxHQUFZO0lBQ25DO1FBQ0ksSUFBSSxFQUFFLFVBQVU7UUFDaEIsU0FBUyxFQUFFLHlCQUFpQjtLQUMvQjtDQUNKLENBQUMiLCJmaWxlIjoiYXBwL3BvbW9kb3JvL3BvbW9kb3JvLnJvdXRlcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFJvdXRlIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcclxuXHJcbmltcG9ydCB7IFBvbW9kb3JvQ29tcG9uZW50IH0gZnJvbSAnLi9pbmRleCc7XHJcblxyXG5leHBvcnQgY29uc3QgUG9tb2Rvcm9Sb3V0ZXM6IFJvdXRlW10gPSBbXHJcbiAgICB7XHJcbiAgICAgICAgcGF0aDogJ3BvbW9kb3JvJyxcclxuICAgICAgICBjb21wb25lbnQ6IFBvbW9kb3JvQ29tcG9uZW50XHJcbiAgICB9XHJcbl07XHJcbiJdfQ==

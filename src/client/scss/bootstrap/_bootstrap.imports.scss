@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@import 'bootstrap.mixins';
+
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid'; // Comentado para utilizar el de Sanitas
+
+// Add Bootstrap features below
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close';
+// @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip';

@@ -1,0 +1,125 @@
+.alert {
+    border-width: 2px;
+    border-style: solid;
+    overflow: hidden;
+    padding: 2rem 2rem 2rem 4rem;
+    position: relative;
+
+    @media (min-width: $screen-xs) {
+        min-width: 430px;
+    }
+
+    .icon-wrapper,
+    .alert-wrapper {
+        display: inline-block !important;
+        vertical-align: top;
+    }
+
+    .icon-wrapper {
+        position: absolute;
+        top: 28px;
+        left: 15px;
+    }
+
+    .alert-wrapper {
+        width: 100%;
+
+        // @media (min-width: $screen-xs) {
+        //     width: 80%;
+        // }
+        //
+        // @media (min-width: $screen-sm) {
+        //     width: 85%;
+        // }
+        //
+        // @media (min-width: $screen-md) {
+        //     width: 86%;
+        // }
+    }
+
+    // Show alert with Toastr
+    &.alert-toastr {
+        margin-bottom: $space-sm;
+        &:hover {
+            box-shadow: 0 0 0 0 transparent !important;
+        }
+        .toast-close-button {
+            color: $gray-dark;
+            font-size: $font-size-xxlg;
+            top: 0 !important;
+            position: absolute;
+            right: 10px !important;
+        }
+        .toast-bottom-right & {
+            margin-left: 12px;
+        }
+    }
+
+
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  @include alert-variant($state-success-bg, $state-success-border, $state-success-text);
+}
+
+.alert-info {
+  @include alert-variant($state-info-bg, $state-info-border, $state-info-text);
+}
+
+.alert-warning {
+  @include alert-variant($state-warning-bg, $state-warning-border, $state-warning-text);
+}
+
+.alert-error {
+  @include alert-variant($state-xdanger-bg, $state-xdanger-border, $state-xdanger-text);
+}
+
+.message {
+    .alert {
+        @include flex(center);  // @include flex(flex-start)
+        background-color: #f1f9fd;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem 1rem;
+        position: relative;
+        width: 100%;
+
+        @media (max-width: $screen-sm) {
+            display: inherit !important;
+        }
+
+        .alert-title {
+            color: $brand-primary;
+            margin-bottom: 1rem;
+
+            @media (min-width: $screen-sm) {
+                margin-bottom: 0;
+                padding-left: 2rem;
+            }
+        }
+
+        .alert-content {
+            p {
+                color: $color-black;
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+
+            @media (min-width: $screen-sm) {
+                border-left: 1px solid #bfbfbf;
+                padding-left: 2rem;
+            }
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

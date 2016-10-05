@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'bupa-icons';
+    src:
+        url($font-path + 'bupa-icons/bupa-icons.ttf?9lvzvj') format('truetype'),
+        url($font-path + 'bupa-icons/bupa-icons.woff?9lvzvj') format('woff'),
+        url($font-path + 'bupa-icons/bupa-icons.svg?9lvzvj#bupa-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'bupa-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 1.25rem;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+    content: "\e915";
+}
+.icon-arrow-bottom:before {
+    content: "\e916";
+}
+.icon-arrow-top:before {
+    content: "\e917";
+}
+.icon-cross:before {
+    content: "\e918";
+}
+.icon-document-02:before {
+    content: "\e919";
+}
+.icon-minus:before {
+    content: "\e91a";
+}
+.icon-pdf:before {
+    content: "\e91b";
+}
+.icon-check:before {
+    content: "\e914";
+}
+.icon-airplane:before {
+    content: "\e900";
+}
+.icon-app-sanitas:before {
+    content: "\e901";
+}
+.icon-arrow-back:before {
+    content: "\e902";
+}
+.icon-arrow-left:before {
+    content: "\e903";
+}
+.icon-arrow-right:before {
+    content: "\e904";
+}
+.icon-calendar:before {
+    content: "\e905";
+}
+.icon-document-01:before {
+    content: "\e906";
+}
+.icon-especialista-videoconsulta:before {
+    content: "\e907";
+}
+.icon-facebook:before {
+    content: "\e908";
+}
+.icon-family:before {
+    content: "\e909";
+}
+.icon-linkedin:before {
+    content: "\e90a";
+}
+.icon-nocopayment:before {
+    content: "\e90b";
+}
+.icon-phone-01:before {
+    content: "\e90c";
+}
+.icon-phone-02:before {
+    content: "\e90d";
+}
+.icon-plus:before {
+    content: "\e90e";
+}
+.icon-professional:before {
+    content: "\e90f";
+}
+.icon-question:before {
+    content: "\e910";
+}
+.icon-singles:before {
+    content: "\e911";
+}
+.icon-twitter:before {
+    content: "\e912";
+}
+.icon-youtube:before {
+    content: "\e913";
+}

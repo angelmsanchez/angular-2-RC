@@ -1,0 +1,69 @@
+.modal {
+    &.fade {
+        .modal-dialog {
+            width: 99%;
+        }
+    }
+
+    .modal-content {
+        font-size: 0.95rem;
+        line-height: normal;
+        margin: 0 auto;
+        max-width: $screen-xs;
+        padding: 1.5rem;
+
+        @media (min-width: $screen-sm) {
+            max-width: $screen-sm;
+            padding: 1.5rem 3rem;
+        }
+
+        &.custom {
+           position: fixed;
+           width: 100%;
+        }
+
+        .close-wrapper {
+            margin-left: 1rem;
+        }
+
+        .title {
+            margin-bottom: 1.5rem;
+        }
+
+        .overflow-wrapper {
+            height: 450px;
+            overflow: auto;
+        }
+
+        form {
+            margin-top: 2rem;
+
+            .form-group {
+                label {
+                    display: block;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .form-group, .checkbox {
+                display: block;
+                margin-bottom: 2rem;
+                margin-right: 0;
+            }
+        }
+
+        .go-back {
+            padding-bottom: 0;
+            padding-top: 1rem;
+        }
+
+        .call-confirm {
+            .group-icon {
+                i {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+}

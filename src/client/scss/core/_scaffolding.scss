@@ -1,0 +1,94 @@
+
+
+// Some overwrite for the scafolding from Bootstrap 3
+
+html {
+    font-size:$font-size-base;
+}
+
+body {
+    overflow-x: hidden;
+
+    // &.modal-open {
+    //     overflow: auto;
+    // }
+}
+
+.body-content-wrapper{
+    max-width: 1110px;
+}
+
+.app-main-view{
+    padding-top:$space-lg;
+}
+
+a {
+    display: inline-block;
+    transition: all .12s linear;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+:focus {
+    outline: none;
+}
+
+
+/* MAIN */
+/* all sections */
+section {
+    position: relative;
+}
+
+/* only main sections */
+.main {
+    section {
+        padding-bottom: 2.5rem;
+        padding-top: 2.5rem;
+
+        @media (min-width: $screen-sm) {
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+
+        }
+
+        &.more-options {
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+    }
+
+    .title {
+        margin-top: 0;
+    }
+
+    .intro {
+        padding-top: 0;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+/* temporal */
+.no-client {
+    font-weight: bold;
+    padding: 1rem 0;
+
+    @media (max-width: $screen-sm) {
+        font-size: 0.85rem;
+    }
+
+    @media (min-width: $screen-sm) {
+        padding: 1.9rem 0;
+    }
+
+    .vertical-middle {
+        > * {
+            &:first-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

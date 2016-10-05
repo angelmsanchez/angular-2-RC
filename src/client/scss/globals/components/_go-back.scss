@@ -1,0 +1,9 @@
+.go-back {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    @media (min-width: $screen-sm) {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+}

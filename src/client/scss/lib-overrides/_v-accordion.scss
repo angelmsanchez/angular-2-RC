@@ -1,0 +1,36 @@
+section.accordion {
+    margin-bottom: 40px;
+    $icon-bkg-sm: 2rem;
+    .vAccordion {
+        color: white;
+        background: $brand-primary;
+        .pane {
+            .pane-header {
+                min-height: 70px;
+                padding-top: 23px;
+                padding-left: 25px;
+                border-bottom: 2px solid white;
+                font-size: $font-size-sm;
+                @media (min-width: $screen-sm) {
+                    font-size: $font-size-lg;
+                }
+                .icon {
+                    color: white;
+                    float: right;
+                    font-size: $icon-bkg-sm;
+                    margin-top: -4px;
+                    padding-right: 20px;
+                }
+            }
+        }
+        .pane-content {
+            background: white;
+            color: black;
+            ul {
+                overflow: hidden;
+                padding: 1rem 0 2rem;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+/*
+    COLORS
+*/
+// BKG VARIATIONS
+// --------------
+.bkg-primary {
+    @include icon-variant($brand-primary);
+    &.inverse {
+        @include icon-variant(transparent, $brand-primary, $brand-primary);
+    }
+    &.bkg-primary-hover {
+        @include icon-variant-hover($brand-primary, $brand-primary, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-primary, $brand-primary);
+        }
+    }
+}
+.bkg-success {
+    @include icon-variant($brand-success);
+    &.inverse {
+        @include icon-variant(transparent, $brand-success, $brand-success);
+    }
+    &.bkg-success-hover {
+        @include icon-variant-hover($brand-success, $brand-success, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-success, $brand-success);
+        }
+    }
+}
+.bkg-info {
+    @include icon-variant($brand-info);
+    &.inverse {
+        @include icon-variant(transparent, $brand-info, $brand-info);
+    }
+    &.bkg-info-hover {
+        @include icon-variant-hover($brand-info, $brand-info, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-info, $brand-info);
+        }
+    }
+}
+.bkg-warning {
+    @include icon-variant($brand-warning);
+    &.inverse {
+        @include icon-variant(transparent, $brand-warning, $brand-warning);
+    }
+    &.bkg-warning-hover {
+        @include icon-variant-hover($brand-warning, $brand-warning, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-warning, $brand-warning);
+        }
+    }
+}
+.bkg-danger {
+    @include icon-variant($brand-danger);
+    &.inverse {
+        @include icon-variant(transparent, $brand-danger, $brand-danger);
+    }
+    &.bkg-danger-hover {
+        @include icon-variant-hover($brand-danger, $brand-danger, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-danger, $brand-danger);
+        }
+    }
+}
+.bkg-xdanger {
+    @include icon-variant($brand-xdanger);
+    &.inverse {
+        @include icon-variant(transparent, $brand-xdanger, $brand-xdanger);
+    }
+    &.bkg-xdanger-hover {
+        @include icon-variant-hover($brand-xdanger, $brand-xdanger, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-xdanger, $brand-xdanger);
+        }
+    }
+}
+.bkg-grayless {
+    @include icon-variant($grayless);
+    &.inverse {
+        @include icon-variant(transparent, $grayless, $grayless);
+    }
+    &.bkg-grayless-hover {
+        @include icon-variant-hover($grayless, $grayless, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $grayless, $grayless);
+        }
+    }
+}
+.bkg-dark {
+    @include icon-variant($black);
+    &.inverse {
+        @include icon-variant(transparent, $black, $black);
+    }
+    &.bkg-dark-hover {
+        @include icon-variant-hover($black, $black, $white);
+        &.inverse {
+            @include icon-variant-hover(transparent, $black, $black);
+        }
+    }
+}
+.bkg-white {
+    @include icon-variant($white);
+    &.inverse {
+        @include icon-variant(transparent, $white, $white);
+    }
+    &.bkg-white-hover {
+        @include icon-variant-hover($white, $white, $black);
+        &.inverse {
+            @include icon-variant-hover(transparent, $white, $white);
+        }
+    }
+}
+.bkg-pink {
+    @include icon-variant($brand-pink);
+    &.inverse {
+        @include icon-variant(transparent, $brand-pink, $brand-pink);
+    }
+    &.bkg-grayless-hover {
+        @include icon-variant-hover($brand-pink, $brand-pink, #fff);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-pink, $brand-pink);
+        }
+    }
+}
+.bkg-xsuccess {
+    @include icon-variant($brand-xsuccess);
+    &.inverse {
+        @include icon-variant(transparent, $brand-xsuccess, $brand-xsuccess);
+    }
+    &.bkg-grayless-hover {
+        @include icon-variant-hover($brand-xsuccess, $brand-xsuccess, #fff);
+        &.inverse {
+            @include icon-variant-hover(transparent, $brand-xsuccess, $brand-xsuccess);
+        }
+    }
+}
+/* gradients */
+.bkg-dark-gradient-bt {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* text-color */
+.color-primary           {color: $brand-primary;}
+.color-primary-dark      {color: $brand-primary-dark;}
+.color-primary-light     {color: $brand-primary-light;}
+.color-dark              {color: $color-black;}
+.color-gray-dark         {color: $color-gray-dark;}
+.color-gray              {color: $color-gray;}
+.color-grayless          {color: $color-grayless;}
+.color-gray-light        {color: $color-gray-light;}
+.color-gray-lighter      {color: $color-gray-lighter;}
+.color-gray-lightest     {color: $color-gray-lightest;}
+.color-white             {color: $color-white;}
+
+/* backgrounds */
+.bkg-primary             {background-color: $brand-primary;}
+.bkg-primary-dark        {background-color: $brand-primary-dark;}
+.bkg-primary-light       {background-color: $brand-primary-light;}
+.bkg-dark                {background-color: $color-black;}
+.bkg-gray-dark           {background-color: $color-gray-dark;}
+.bkg-gray                {background-color: $color-gray;}
+.bkg-grayless            {background-color: $color-grayless;}
+.bkg-gray-light          {background-color: $color-gray-light;}
+.bkg-gray-lighter        {background-color: $color-gray-lighter;}
+.bkg-gray-lightest       {background-color: $color-gray-lightest;}
+.bkg-white               {background-color: $color-white;}

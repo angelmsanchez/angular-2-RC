@@ -1,0 +1,102 @@
+@import '../../../../scss/vars';
+@import '../../../../scss/core/mixins/flex';
+.steps {
+    text-align: center;
+    margin: 4rem auto 2rem;
+    padding-right: 0.75rem;
+    width: 100%;
+    max-width: 1050px;
+    * {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .dots {
+        display: table;
+        width: 100%;
+    }
+    ol {
+        width: 100%;
+        display: table-row;
+    }
+    li {
+        width: 100px;
+        padding-top: 1.5em;
+        border-top: 8px solid #e6e6e6;
+        display: table-cell;
+        vertical-align: top;
+        > div.text {
+            position: absolute;
+            text-align: center;
+            display: none;
+            &.active {
+                font-size: 25px;
+            }
+        }
+    }
+    li:nth-child(odd) {
+        color: $color-red;
+    }
+    li.active,
+    li.offoff {
+        border-color: #77ca2d;
+    }
+    li.offoff {
+        color: #000000;
+    }
+    li.active span,
+    li.offoff span {
+        background-color: #77ca2d;
+        z-index: 1;
+    }
+    li span {
+        display: block;
+        position: absolute;
+        top: -14px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: #e6e6e6;
+        &:first-child {
+            right: -10px;
+            left: auto;
+        }
+        &:last-child {
+            position: absolute;
+            left: -1px;
+            right: auto;
+        }
+    }
+    > .text {
+        color: $color-gray;
+        font-size: 25px;
+        text-align: center;
+        padding-left: calc(#{$space-xlg} - #{$space-xlg});
+        padding-right: calc(#{$space-xlg} - #{$space-xlg});
+    }
+    @media only screen and (min-width: $screen-sm) {
+        .dots {
+            min-height: 70px;
+        }
+        li {
+            > div.text {
+                display: block;
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+    @media only screen and (min-width: $screen-md) {
+        li {
+            > div.text {
+                display: block;
+                right: 0;
+                width: 100%;
+            }
+        }
+    }
+    @media print {
+        display: none;
+    }
+}

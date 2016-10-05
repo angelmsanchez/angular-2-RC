@@ -1,0 +1,13 @@
+.rating {
+    .icon-star-empty {
+        &.icon-favorite:before {
+            color: #f1f0f0;
+        }
+    }
+
+    .icon-star-filled {
+        &.icon-favorite:before {
+            color: $brand-primary;
+        }
+    }
+}

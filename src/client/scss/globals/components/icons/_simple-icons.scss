@@ -1,0 +1,37 @@
+// COLOR VARIATIONS
+// --------------
+.icon {
+    &.color-primary {
+        @include icon-variant(inherit, "", $brand-primary);
+    }
+    &.color-success {
+        @include icon-variant(inherit, "", $brand-success);
+    }
+    &.color-info {
+        @include icon-variant(inherit, "", $brand-info);
+    }
+    &.color-warning {
+        @include icon-variant(inherit, "", $brand-warning);
+    }
+    &.color-danger {
+        @include icon-variant(inherit, "", $brand-danger);
+    }
+    &.color-xdanger {
+        @include icon-variant(inherit, "", $brand-xdanger);
+    }
+    &.color-grayless {
+        @include icon-variant(inherit, "", $grayless);
+    }
+    &.color-dark {
+        @include icon-variant(inherit, "", $black);
+    }
+    &.color-white {
+        @include icon-variant(inherit, "", $white);
+    }
+    &.color-pink {
+        @include icon-variant(inherit, "", $brand-pink);
+    }
+    &.color-xsuccess {
+        @include icon-variant(inherit, "", $brand-xsuccess);
+    }
+}

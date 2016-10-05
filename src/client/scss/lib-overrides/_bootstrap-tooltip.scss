@@ -1,0 +1,169 @@
+//colors
+//*text tooltip message color
+$white: #fff;
+//*default tooltip message background color
+$light: $brand-primary;
+//*alternative tooltip message background color
+//*add "tooltip-dark" class to change tooltip bg color
+//*see line "//tooltip dark"
+$black: $gray-dark;
+
+//fonts
+$font_0: Helvetica Neue;
+$font_1: Helvetica;
+$font_2: Arial;
+$font_3: sans-serif;
+
+.tooltip {
+	position: absolute;
+	z-index: 1070;
+	display: block;
+	font-family: $font_0, $font_1, $font_2, $font_3;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: left;
+	text-align: start;
+	text-decoration: none;
+	text-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+	white-space: normal;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	line-break: auto;
+	&.in {
+		filter: alpha(opacity=90);
+		opacity: .9;
+	}
+	&.top {
+		padding: 5px 0;
+		margin-top: -3px;
+		.tooltip-arrow {
+			bottom: 0;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px 5px 0;
+			border-top-color: $light;
+		}
+	}
+	&.right {
+		padding: 0 5px;
+		margin-left: 3px;
+		.tooltip-arrow {
+			top: 50%;
+			left: 0;
+			margin-top: -5px;
+			border-width: 5px 5px 5px 0;
+			border-right-color: $light;
+		}
+	}
+	&.bottom {
+		padding: 5px 0;
+		margin-top: 3px;
+		.tooltip-arrow {
+			top: 0;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 0 5px 5px;
+			border-bottom-color: $light;
+		}
+	}
+	&.left {
+		padding: 0 5px;
+		margin-left: -3px;
+		.tooltip-arrow {
+			top: 50%;
+			right: 0;
+			margin-top: -5px;
+			border-width: 5px 0 5px 5px;
+			border-left-color: $light;
+		}
+	}
+	&.top-left .tooltip-arrow {
+		right: 5px;
+		bottom: 0;
+		margin-bottom: -5px;
+		border-width: 5px 5px 0;
+		border-top-color: $light;
+	}
+	&.top-right .tooltip-arrow {
+		bottom: 0;
+		left: 5px;
+		margin-bottom: -5px;
+		border-width: 5px 5px 0;
+		border-top-color: $light;
+	}
+	&.bottom-left .tooltip-arrow {
+		top: 0;
+		right: 5px;
+		margin-top: -5px;
+		border-width: 0 5px 5px;
+		border-bottom-color: $light;
+	}
+	&.bottom-right .tooltip-arrow {
+		top: 0;
+		left: 5px;
+		margin-top: -5px;
+		border-width: 0 5px 5px;
+		border-bottom-color: $light;
+	}
+}
+.tooltip-inner {
+	max-width: 200px;
+	padding: 12px;
+	color: $white;
+	text-align: center;
+	background-color: $light;
+	border-radius: 4px;
+}
+.tooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+
+// tooltip dark
+.tooltip.tooltip-dark {
+	&.top {
+		.tooltip-arrow {
+			border-top-color: $black;
+		}
+	}
+	&.right {
+		.tooltip-arrow {
+			border-right-color: $black;
+		}
+	}
+	&.bottom {
+		.tooltip-arrow {
+			border-bottom-color: $black;
+		}
+	}
+	&.left {
+		.tooltip-arrow {
+			border-left-color: $black;
+		}
+	}
+	&.top-left .tooltip-arrow {
+		border-top-color: $black;
+	}
+	&.top-right .tooltip-arrow {
+		border-top-color: $black;
+	}
+	&.bottom-left .tooltip-arrow {
+		border-bottom-color: $black;
+	}
+	&.bottom-right .tooltip-arrow {
+		border-bottom-color: $black;
+	}
+	.tooltip-inner {
+		background-color: $black;
+	}
+}

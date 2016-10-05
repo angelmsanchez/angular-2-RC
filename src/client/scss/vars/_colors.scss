@@ -1,0 +1,73 @@
+@charset "UTF-8";
+//  COLORS
+// -----------------------------------------------
+// New range of colors
+$color-cyan: #0079c8 !default;
+$color-ligthgray: #e6e6e6 !default;
+$color-teal: #008386 !default;
+$color-burgundy: #942151 !default;
+$color-purple: #6a2ca1 !default;
+$color-violet: #a4219b !default;
+$color-green: #18542c !default;
+$color-green-light: #007a3d !default;
+$color-green-pistachio: #678004 !default;
+$color-orange: #ef8900 !default;
+$color-new-orange: #fe5000 !default;
+$color-red: #ff0000 !default;
+$color-pink: #e60e68 !default;
+//== Colors interactive
+$gray-interactive-light: #ecf6ff !default;
+$gray-interactive-lighter: #f5faff !default;
+$gray-interactive-lightest: #fcf1fa !default;
+$blue-interactive-sky: #dbf1fa !default;
+$flesh-interactive-light: #efffda !default;
+$flesh-interactive-lighter: #fdf6dd !default;
+$brand-primary: $color-red !default;
+$brand-primary-light: lighten($color-red, 40%) !default;
+$brand-primary-dark: mix($color-red, #000, 60%) !default;
+$brand-success: $color-green-light !default;
+$brand-info: $color-teal !default;
+$brand-warning: $color-orange !default;
+$brand-new-warning: $color-new-orange !default;
+$brand-danger: $color-burgundy !default;
+$brand-xdanger: $color-red !default;
+$brand-pink: $color-pink !default;
+$brand-xsuccess: $color-green-pistachio !default;
+$brand-item-activated: lighten( $brand-primary, 35%) !default;
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+$state-success-text: $brand-success !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-info-text: $brand-info !default;
+$state-info-bg: #d9edf7 !default;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-warning-text: $brand-warning !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-new-warning-text: $brand-new-warning !default;
+$state-new-warning-bg: #fedac9 !default;
+$state-new-warning-border: darken(adjust-hue($state-new-warning-bg, -10), 5%) !default;
+$state-danger-text: $brand-danger !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-xdanger-text: $brand-xdanger !default;
+$state-xdanger-bg: #f2dede !default;
+$state-xdanger-border: darken(adjust-hue($state-xdanger-bg, -10), 5%) !default;
+$black: black !default;
+$gray-dark: #333333 !default;
+$gray: #55595c !default;
+$grayless: #acacac !default;
+$gray-light: #e6e6e6 !default;
+$gray-lighter: #f2f1f1 !default;
+$gray-lightest: #f7f7f7 !default;
+$white: white !default;
+$color-gray-dark: $gray-dark !default;
+$color-gray: $gray !default;
+$color-grayless: $grayless !default;
+$color-gray-light: $gray-light !default;
+$color-gray-lighter: $gray-lighter !default;
+$color-gray-lightest: $gray-lightest !default;
+$color-white: $white !default;
+$color-black: $black !default;

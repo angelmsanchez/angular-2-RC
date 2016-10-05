@@ -1,0 +1,25 @@
+#splash {
+    position:absolute;
+    z-index: 99999;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,255, .8);
+
+    .content {
+        text-align: center;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        img {
+
+        }
+
+        p {
+            margin-top:$space-lg;
+        }
+    }
+
+}

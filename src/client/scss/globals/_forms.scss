@@ -1,0 +1,299 @@
+// Define here input, textarea, select, ....
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    -webkit-appearance: none;
+    width: 100%;
+    min-height: 38px;
+    background-color: white;
+    color:  $color-gray-dark;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: left;
+    box-shadow: none;
+    transition: 0.3s ease-out;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        color: #000;
+    }
+}
+input::-webkit-input-placeholder {
+    font-weight: light;
+    font-style: italic;
+    font-size: $font-size-root;
+    line-height: $font-size-root;
+    opacity: 1 !important;
+}
+input:-moz-placeholder {
+    font-weight: light;
+    font-style: italic;
+    font-size: $font-size-root;
+    line-height: $font-size-root;
+}
+input::-moz-placeholder {
+    font-weight: light;
+    font-style: italic;
+    font-size: $font-size-root;
+    line-height: $font-size-root;
+}
+input:-ms-input-placeholder {
+    font-weight: light;
+    font-style: italic;
+    font-size: $font-size-root;
+    line-height: $font-size-root;
+    opacity: 1 !important;
+}
+// Taken from Bootstrap
+.form-control {
+    display: block;
+    width: 100%;
+    // height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    height: auto;
+    padding: $padding-base-vertical calc(#{$padding-large-horizontal} * 2) $padding-base-vertical $padding-base-horizontal;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+    box-shadow: 0 0 0 transparent !important;
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus;
+    // Placeholder
+    @include placeholder;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
+    // [converter] extracted textarea& to textarea.form-control
+}
+
+.form-group {
+    position: relative;
+
+    .form-control-feedback {
+        position: absolute;
+        bottom: 25px;
+        right: 5px;
+    }
+
+    i {
+        display: none;
+    }
+
+    &.has-success,
+    &.has-error,
+    &.has-warning {
+        i {
+            display: block;
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    label {
+        @media (min-width: $screen-md) and (max-width: $screen-lg) {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (min-width: $screen-sm) {
+        margin-right: 0.75rem;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin-right: 1.5rem;
+    }
+}
+
+// Input groups
+.input-group {
+    position: relative;
+
+    .input-group-addon {
+        font-size : $font-size-xxlg;
+        position  : absolute;
+        top       : 50%;
+        transform : translateY(-50%);
+        &:first-child {
+            left: 0;
+        }
+        &:last-child {
+            right: 0;
+        }
+    }
+}
+
+// Radio Buttons
+.radio,
+.checkbox {
+    display: inline-block;
+    margin-right: $space-md;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    input {
+        margin-right: $space-sm;
+        outline: none !important;
+        // -webkit-appearance: none;
+    }
+    label {
+        display: block;
+
+        input {
+            margin-right: 0.25rem;
+            margin-top: 3px;
+
+            @media (min-width: $screen-sm) {
+                vertical-align: -2px;
+            }
+        }
+    }
+
+    input,
+    span {
+        vertical-align: inherit;
+    }
+}
+
+.wrapper-form-group {
+    max-width: 400px;
+    display: inline-block;
+    padding: 2rem;
+    background-color: #f5f5f5;
+
+    .form-group {
+        margin-top: $space-md;
+
+        &.has-success,
+        &.has-error,
+        &.has-warning {
+            input {
+                border-style: solid;
+                border-width: 1px;
+            }
+        }
+
+        .form-control-feedback {
+            right: 8px;
+        }
+    }
+}
+
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+//
+// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
+
+// [converter] extracted from `.form-inline` for libsass compatibility
+@mixin form-inline {
+
+  // Kick in the inline
+  @media (min-width: $screen-sm-min) {
+    // Inline-block all the things for "inline"
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    // In navbar-form, allow folks to *not* use `.form-group`
+    .form-control {
+      display: inline-block;
+      min-height: inherit;
+      padding: 0.2rem calc(#{$padding-large-horizontal} * 2) 0.2rem $padding-base-horizontal;
+      vertical-align: middle;
+      width: auto; // Prevent labels from stacking above inputs in `.form-group`
+    }
+
+    // Make static controls behave like regular ones
+    .form-control-static {
+      display: inline-block;
+    }
+
+    .input-group {
+      display: inline-table;
+      vertical-align: middle;
+
+      .input-group-addon,
+      .input-group-btn,
+      .form-control {
+        width: auto;
+      }
+    }
+
+    // Input groups need that 100% width though
+    .input-group > .form-control {
+      width: 100%;
+    }
+
+    .control-label {
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    // Remove default margin on radios/checkboxes that were used for stacking, and
+    // then undo the floating of radios and checkboxes to match.
+    .radio,
+    .checkbox {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+
+      label {
+        padding-left: 0;
+      }
+    }
+    .radio input[type="radio"],
+    .checkbox input[type="checkbox"] {
+      position: relative;
+      margin-left: 0;
+    }
+
+    // Re-override the feedback icon.
+    .has-feedback .form-control-feedback {
+      top: 0;
+    }
+  }
+}
+// [converter] extracted as `@mixin form-inline` for libsass compatibility
+.form-inline {
+  @include form-inline;
+}

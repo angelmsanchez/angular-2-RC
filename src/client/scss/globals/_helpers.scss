@@ -1,0 +1,101 @@
+/*
+    TEXT
+*/
+
+.text-large {text-size: $font-size-lg;}
+.text-xlarge {text-size: $font-size-xlg;}
+.bold          {font-weight: 400;}
+.extrabold     {font-weight: 600;}
+
+.align-vertical {
+    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        vertical-align: middle;
+        margin: auto;
+    }
+}
+
+.bkg-alt{
+    background-color: $gray-light;
+}
+
+.content-center-body {
+    max-width: $maxwidth-bodycontent;
+    margin:0 auto;
+}
+
+.no-padding{
+    padding:0 !important;
+}
+
+.no-margin{
+    margin:0 !important;
+}
+
+/* img full width */
+img.full {
+    width: 100%;
+    height:auto;
+}
+
+/* vertical middle */
+.vertical-middle {
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/*
+   Classes para añadir padding a cualquer elemento.
+   Compuesto por 3 letras:
+       p = padding
+       v = vertical, h = horizontal
+       t = top, r = right, b = bottom, l = left
+       s = small, m = medium, l = large
+*/
+
+// paddgins
+.pts { padding-top:    $space-sm !important }
+.ptm { padding-top:    $space-md !important }
+.ptl { padding-top:    $space-lg !important }
+.prs { padding-right:  $space-sm !important }
+.prm { padding-right:  $space-md !important }
+.prl { padding-right:  $space-lg !important }
+.pbs { padding-bottom: $space-sm !important }
+.pbm { padding-bottom: $space-md !important }
+.pbl { padding-bottom: $space-lg !important }
+.pls { padding-left:   $space-sm !important }
+.plm { padding-left:   $space-md !important }
+.pll { padding-left:   $space-lg !important }
+.phs { padding-left:   $space-sm !important; padding-right: $space-sm !important; }
+.phm { padding-left:   $space-md !important; padding-right: $space-md !important; }
+.phl { padding-left:   $space-lg !important; padding-right: $space-lg !important; }
+.pvs { padding-top:    $space-sm !important; padding-bottom: $space-sm !important; }
+.pvm { padding-top:    $space-md !important; padding-bottom: $space-md !important; }
+.pvl { padding-top:    $space-lg !important; padding-bottom: $space-lg !important; }
+
+// margins
+.mts { margin-top:    $space-sm !important}
+.mtm { margin-top:    $space-md !important}
+.mtl { margin-top:    $space-lg !important}
+.mrs { margin-right:  $space-sm !important}
+.mrm { margin-right:  $space-md !important}
+.mrl { margin-right:  $space-lg !important}
+.mbs { margin-bottom: $space-sm !important}
+.mbm { margin-bottom: $space-md !important}
+.mbl { margin-bottom: $space-lg !important}
+.mls { margin-left:   $space-sm !important}
+.mlm { margin-left:   $space-md !important}
+.mll { margin-left:   $space-lg !important}
+.mhs { margin-left:   $space-sm !important; margin-right:   $space-sm !important; }
+.mhm { margin-left:   $space-md !important; margin-right:   $space-md !important; }
+.mhl { margin-left:   $space-lg !important; margin-right:   $space-lg !important; }
+.mvs { margin-top:    $space-sm !important; margin-bottom:  $space-sm !important; }
+.mvm { margin-top:    $space-md !important; margin-bottom:  $space-md !important; }
+.mvl { margin-top:    $space-lg !important; margin-bottom:  $space-lg !important; }
