@@ -13,11 +13,7 @@ import { Constants } from '../shared/constants/index';
 })
 
 export class PomodoroComponent implements OnInit {
-    private _intervalPomodoro: number[] = [25, 5, 25, 5, 25, 15];
-    private _contadorInterval: number = 0;
-    private _timeSelected: number = 0.1;
-
-    steps: Object[];
+    public steps: Object[];
     public actualStep: Object;
     public urlImg: String;
     public isEnabledStart: boolean = true;
@@ -26,6 +22,9 @@ export class PomodoroComponent implements OnInit {
     public unitTime: String = 'Unidad Pomodoro';
     public isPair: boolean = false;
 
+    private _intervalPomodoro: number[] = [25, 5, 25, 5, 25, 15];
+    private _contadorInterval: number = 0;
+    private _timeSelected: number = 0.1;
     ngOnInit() {
         this.urlImg = Constants.URL_IMG;
         this.steps = [

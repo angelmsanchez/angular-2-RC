@@ -1,4 +1,3 @@
-
 .dropdown {
     button {
         border-top: none;
@@ -7,158 +6,18 @@
         background-color: transparent;
         border-bottom: 1px solid $brand-primary;
     }
-
     ul {
         box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
         border: none;
-        padding:0;
+        padding: 0;
     }
-
     li {
-        border-bottom:1px solid $gray-light;
+        border-bottom: 1px solid $gray-light;
         &:last-child {
-            border-bottom:none;
+            border-bottom: none;
         }
         a {
             padding: 20px 30px;
         }
     }
 }
-
-
-
-// .filter-dropdown {
-//     margin-bottom: $space-xlg;
-//
-//     @media (min-width: $screen-md) {
-//         margin-top: $space-md;
-//     }
-// }
-//
-// .dropdown-component {
-//     $dropdown-width: 250px;
-//     padding: 0;
-//     .btn {
-//         background-color: transparent;
-//         border-color: transparent;
-//         border-bottom: 1px solid $brand-primary;
-//         padding: 10px;
-//         min-width: $dropdown-width;
-//
-//         color: #000;
-//         text-align: left;
-//         position: relative;
-//         font-weight: 400;
-//         outline: 0;
-//         i {
-//             color: $brand-primary;
-//             font-size: 1.2rem;
-//             padding: 0;
-//             position: absolute;
-//             right: 0;
-//             top: 50%;
-//             margin: -8px 0 0 0;
-//         }
-//         &:focus {
-//             outline: 0;
-//         }
-//         &:active {
-//             box-shadow: none;
-//         }
-//     }
-//     .dropdown-menu {
-//         padding: 0;
-//         margin: -1px 0 0;
-//
-//         section#content & {
-//             z-index: 100;
-//         }
-//     }
-//     &.open > .dropdown-menu {
-//         max-height: 400px;
-//         overflow-y: auto;
-//         min-width: $dropdown-width;
-//     }
-//     li {
-//         padding: 5px 10px;
-//         text-align: left;
-//         border-bottom: 1px solid #EEE;
-//         &:last-child {
-//             border: 0;
-//         }
-//         &:hover {
-//             background-color:  $gray-lighter;
-//             cursor: default;
-//         }
-//         &.selected {
-//             background-color: $brand-primary;
-//             color: white;
-//         }
-//     }
-// }
-//
-// // =========================
-// // ==== dropdown styles ====
-// // =========================
-//
-// .dropdown-box {
-//     // float: right;
-//     display: inline-block;
-//
-//     &.margin {
-//         margin-right: $space-md;
-//     }
-//     .btn {
-//         border: 2px solid #E7E7E7;
-//         padding-right: 35px;
-//         min-height: 56px;
-//         i {
-//             right: 10px;
-//         }
-//     }
-//     // override
-//     .dropdown-component {
-//         .dropdown-menu {
-//             margin: 5px 0 0;
-//         }
-//         .btn {
-//             color: #000;
-//         }
-//     }
-// }
-//
-// @media (max-width: $screen-md) {
-//     .dropdown-box {
-//         margin-top : $space-md;
-//         width : 100%;
-//         .dropdown-toggle {
-//             width : 100%;
-//         }
-//
-//         .dropdown-menu {
-//             width : 100%;
-//         }
-//     }
-// }
-//
-// .dropdown-double-icon {
-//     .open > .dropdown-menu {
-//         width: 100%;
-//     }
-//
-//     .btn {
-//         padding-left: $space-xlg;
-//         padding-right: $space-lg;
-//     }
-//
-//     i:first-child {
-//         left: 7px;
-//         font-size: 2rem;
-//         position: absolute;
-//         top: 0px;
-//     }
-//
-//     i:last-child {
-//         right: 0;
-//     }
-// }
