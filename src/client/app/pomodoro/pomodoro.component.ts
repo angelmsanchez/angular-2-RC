@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-// import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
-// import { NgClass } from '@angular/common';
 
 import { Constants } from '../shared/constants/index';
 
@@ -17,7 +15,7 @@ export class PomodoroComponent implements OnInit {
     public actualStep: Object;
     public urlImg: String;
     public isEnabledStart: boolean = true;
-    public contadorMin: String = this._intervalPomodoro[0].toString();
+    public contadorMin: String;
     public contadorSec: String = '00';
     public unitTime: String = 'Unidad Pomodoro';
     public isPair: boolean = false;
@@ -25,34 +23,11 @@ export class PomodoroComponent implements OnInit {
     private _intervalPomodoro: number[] = [25, 5, 25, 5, 25, 15];
     private _contadorInterval: number = 0;
     private _timeSelected: number = 0.1;
+
     ngOnInit() {
         this.urlImg = Constants.URL_IMG;
-        this.steps = [
-            {
-                id: 0,
-                name: '25:00'
-            },
-            {
-                id: 1,
-                name: '5:00'
-            },
-            {
-                id: 2,
-                name: '25:00'
-            },
-            {
-                id: 3,
-                name: '5:00'
-            },
-            {
-                id: 4,
-                name: '25:00'
-            },
-            {
-                id: 5,
-                name: '15:00'
-            }
-        ];
+        this.contadorMin = this._intervalPomodoro[0].toString();
+        this.steps = this.getSteps();
         this.actualStep = this.steps[0];
     }
 
@@ -97,5 +72,33 @@ export class PomodoroComponent implements OnInit {
             this.contadorMin = this._intervalPomodoro[this._contadorInterval].toString();
             this.isPair = (Number(this._contadorInterval + 1)) % 2 === 0;
         }
+    }
+    private getSteps() {
+        return [
+            {
+                id: 0,
+                name: '25:00'
+            },
+            {
+                id: 1,
+                name: '5:00'
+            },
+            {
+                id: 2,
+                name: '25:00'
+            },
+            {
+                id: 3,
+                name: '5:00'
+            },
+            {
+                id: 4,
+                name: '25:00'
+            },
+            {
+                id: 5,
+                name: '15:00'
+            }
+        ];
     }
 }

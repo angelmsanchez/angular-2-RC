@@ -5,7 +5,7 @@ import { PomodoroRoutes } from './pomodoro/index';
 import { FilmRoutes } from './film/index';
 
 export const routes: Routes = [
-  ...HomeRoutes,
-  ...PomodoroRoutes,
-  ...FilmRoutes,
-]
+    ...HomeRoutes,
+    ...PomodoroRoutes,
+    ...FilmRoutes
+];
