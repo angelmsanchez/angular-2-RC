@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
  */
 @Component({
   moduleId: module.id,
-  selector: 'sd-navbar',
-  templateUrl: 'navbar.component.html',
-  styleUrls: ['navbar.component.css'],
+  selector: 'app-navbar',
+  templateUrl: 'navbar.html',
+  styleUrls: ['navbar.css'],
 })
 
 export class NavbarComponent {}

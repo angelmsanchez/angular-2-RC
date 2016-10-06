@@ -10,6 +10,7 @@ import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
 import { FilmModule } from './film/film.module';
+import 'rxjs/Rx';
 
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), HomeModule, SharedModule.forRoot(), PomodoroModule, FilmModule],

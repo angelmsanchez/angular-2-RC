@@ -91,7 +91,6 @@ header#mainHeader {
             .help-info {
                 .group-icon {
                     @include flex(flex-end);
-                    // @include flex(flex-start)
                     .text-wrapper {
                         .phone {
                             font-size: 1.25rem;

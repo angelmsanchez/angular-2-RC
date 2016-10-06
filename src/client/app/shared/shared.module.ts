@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HeaderComponent } from './components/header/index';
-import { NavbarComponent } from './navbar/index';
-import { NameListService } from './name-list/index';
+import { HeaderComponent, NavbarComponent, FooterComponent } from './components/index';
 import { ContribService } from './services/index';
 
 /**
@@ -14,15 +12,15 @@ import { ContribService } from './services/index';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  declarations: [HeaderComponent, NavbarComponent],
-  exports: [HeaderComponent, NavbarComponent,
+  declarations: [HeaderComponent, NavbarComponent, FooterComponent],
+  exports: [HeaderComponent, NavbarComponent, FooterComponent,
     CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [NameListService, ContribService]
+      providers: [ ContribService]
     };
   }
 }

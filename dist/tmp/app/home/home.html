@@ -1,47 +1,21 @@
-ANGEL HOME HTML
 <section id="home" class="main">
     <!--TODO:FALTA SPINNER-->
     <!--<spinner [showOn]="activeSpinner"></spinner>-->
-
-    <div class="intro container">
+    <div class="container">
         <div class="row">
-            <h1 class="title color-primary col-lg-6">{{homeContrib?.textContent?.title}}</h1>
-            <h5 class="subtitle cºol-lg-6">{{homeContrib?.textContent?.subtitle}}</h5>
+            <h3 class="title color-primary col-lg-6">Angular 2</h3>
+            <h6 class="subtitle col-lg-6">{{day}}</h6>
         </div>
     </div>
-    <!--TODO:FALTA component-->
-    <!--<sub-header></sub-header>-->
 
-    <section class="picbox" *ngIf="homeContrib?.promoHeader">
-        <img [src]="homeContrib?.promoImgDown?.img" alt="homeContrib?.promoImgDown?.title">
-        <div class="content-wrapper text-center color-white bkg-dark-gradient-bt">
-            <div>
-                <h2 class="title">{{homeContrib?.promoHeader?.title}}</h2>
-                <p class="subtitle">{{homeContrib?.promoHeader?.subtitle}}</p>
-                <button class="link-icon btn btn-white-inverse">
-                    <a [routerLink]="['/about']">{{homeContrib?.promoHeader?.linkText}}</a>
-                    <i class="icon-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="know-blua container" *ngIf="homeContrib?.promoImgDown">
+    <div class="container">
         <div class="row">
-            <div class="col-md-6 know-content">
-                <h3 class="title">{{homeContrib?.promoImgDown?.title}}</h3>
-                <p class="subtitle">{{homeContrib?.promoImgDown?.subtitle}}</p>
-                <button title="homeContrib?.promoImgDown?.linkText" class="link-icon btn btn-primary-inverse" (click)="goToUrl(homeContrib?.promoImgDown?.linkUrl)">
-                    <span>{{homeContrib?.promoImgDown?.linkText}}</span>
-                    <i class="icon-arrow-right"></i>
-                </button>
-            </div>
-            <div class="col-md-6 text-center know-image">
-                <picture *ngIf="homeContrib?.promoImgDown?.img">
-                    <img [src]="homeContrib?.promoImgDown?.img" alt="homeContrib?.promoImgDown?.title">
-                </picture>
-            </div>
+            <ul class="title">
+                <h5>Web components</h5>
+                <li><a [routerLink]="['/pomodoro']">Pomodoro</a></li>
+                <li><a [routerLink]="['/film']">Films</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
 
 </section>
