@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent, NavbarComponent, FooterComponent } from './components/index';
-import { ContribService } from './services/index';
+import { ContribService, LocalService } from './services/index';
 
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
@@ -20,7 +20,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [ ContribService]
+      providers: [ContribService, LocalService]
     };
   }
 }
