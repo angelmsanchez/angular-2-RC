@@ -12,7 +12,7 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-import { NameListService } from '../shared/index';
+// import { NameListService } from '../shared/index';
 import { HomeModule } from './home.module';
 
 export function main() {
@@ -24,7 +24,7 @@ export function main() {
         imports: [FormsModule, RouterModule, HttpModule, HomeModule],
         declarations: [TestComponent],
         providers: [
-          NameListService,
+          // NameListService,
           BaseRequestOptions,
           MockBackend,
           {provide: Http, useFactory: function (backend: ConnectionBackend, defaultOptions: BaseRequestOptions) {

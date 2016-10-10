@@ -1,7 +1,8 @@
 // Feel free to extend this interface
 // depending on your app specific config.
 export interface EnvConfig {
-  API?: string;
+  API_LOCALHOST?: string;
+  API_FILMS?: string;
   ENV?: string;
 }
 

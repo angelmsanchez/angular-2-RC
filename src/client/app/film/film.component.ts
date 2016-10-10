@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { FilmService } from './film.service';
+
 @Component({
     moduleId: module.id,
     selector: 'app-film',
@@ -9,4 +11,7 @@ import { Component } from '@angular/core';
 
 export class FilmComponent {
 
+    constructor(private filmService: FilmService) {
+        console.log('FilmComponent: ' + this.filmService);
+    }
 }

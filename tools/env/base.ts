@@ -1,8 +1,8 @@
 import { EnvConfig } from './env-config.interface';
 
 const BaseConfig: EnvConfig = {
-  // Sample API url
-  API: 'http://localhost:4444/'
+  API_LOCALHOST: 'http://localhost:4444/',
+  API_FILMS: 'http://localhost:5555/'
 };
 
 export = BaseConfig;
