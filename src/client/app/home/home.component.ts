@@ -11,21 +11,19 @@ import * as moment from 'moment';
 
 export class HomeComponent implements OnInit {
     day: string;
-    // valueLocalStorage: string;
+    valueLocalStorage: string;
 
     ngOnInit() {
         this.day = moment().format('dddd DD MMMM  YYYY');
     }
 
     setLocalStorage(value: string): boolean {
-        // sessionStorage.setItem('localStorage', value);
-        localStorage.setItem('localStorage-2', value);
+        localStorage.setItem('prueba', value);
         return false;
     }
 
-    // getLocalStorage(value: string) {
-    //     this.valueLocalStorage = localStorage.getItem('localStorage');
-    //     console.log('this.valueLocalStorage ' + this.valueLocalStorage);
-    // }
+    getLocalStorage(value: string) {
+        this.valueLocalStorage = localStorage.getItem('prueba');
+    }
 
 }
