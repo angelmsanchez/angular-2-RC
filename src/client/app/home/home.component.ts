@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as moment from 'moment';
+// import * as moment from 'moment';
 
 @Component({
     moduleId: module.id,
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     valueLocalStorage: string;
 
     ngOnInit() {
-        this.day = moment().format('dddd DD MMMM  YYYY');
+        // this.day = moment().format('dddd DD MMMM  YYYY');
     }
 
     setLocalStorage(value: string): boolean {
