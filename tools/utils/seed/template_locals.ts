@@ -24,7 +24,7 @@ const getConfig = (path: string, env: string): any => {
 export function templateLocals() {
   const configEnvName = argv['config-env'] || 'dev';
   const configPath = Config.getPluginConfig('environment-config');
-  const baseConfig = getConfig(configPath, 'base');
+  // const baseConfig = getConfig(configPath, 'base');
   const config = getConfig(configPath, configEnvName);
 
   if (!config) {
@@ -32,7 +32,8 @@ export function templateLocals() {
   }
 
   return Object.assign(Config, {
-    ENV_CONFIG: JSON.stringify(Object.assign(baseConfig, config))
+    ENV_CONFIG: JSON.stringify(Object.assign(config))
+    // ENV_CONFIG: JSON.stringify(Object.assign(baseConfig, config))
   });
 }
 
