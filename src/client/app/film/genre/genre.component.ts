@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 
-import { FilmService } from './film.service';
+import { FilmService } from '../film.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'app-film',
-    templateUrl: './film.html',
-    styleUrls: ['./film.css']
+    selector: 'app-genre',
+    templateUrl: './genre.html',
+    styleUrls: ['./genre.css']
 })
 
-export class FilmComponent {
+export class GenreComponent {
     public genres: Object[];
     public actualType: string;
 
     constructor(private filmService: FilmService) {
+        console.log('GenreComponent');
     }
 
     getList(endPointType: string, type?: string) {
@@ -22,11 +23,5 @@ export class FilmComponent {
         this.filmService
             .get(endPoint)
             .subscribe((data: any) => this.genres = data.genres);
-    }
-
-    goTo(idGenrer: number): boolean {
-        console.log('goTo');
-        window.open();
-        return false;
     }
 }

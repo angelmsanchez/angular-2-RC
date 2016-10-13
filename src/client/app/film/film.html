@@ -8,8 +8,9 @@
 	</button>
 	<h6 *ngIf="actualType">Generos de {{ actualType }}:</h6>
 	<div *ngFor="let genre of genres">
-		<button (click)="getList(genre.id)" type="button" class="btn btn-default">
+		<a [routerLink]="['/films/genres']">
+		<!--<button (click)="goTo(genre.id)" type="button" class="btn btn-default">-->
 			<span>{{ genre.name }}</span>
-		</button>
+		</a>
 	</div>
 </section>
