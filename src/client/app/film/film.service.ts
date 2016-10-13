@@ -5,14 +5,14 @@ import { Config } from '../shared/config/index';
 
 @Injectable()
 export class FilmService {
+    apiKey: string = '?api_key=beabd4845f3d498cd54f79c4cfd9c73a';
 
     constructor(private http: Http) {
-        console.log('FilmService: ' + Config.API_FILMS);
     }
 
-    getContrib(endPoint: string) {
+    get(endPoint: string) {
         return this.http
-            .get(Config.API_FILMS + endPoint)
+            .get(Config.API_FILMS + endPoint + this.apiKey)
             .map(response => response.json());
     }
 
