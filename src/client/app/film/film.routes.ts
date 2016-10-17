@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { FilmComponent } from './index';
-import { GenreComponent } from './genre/index';
+import { FilmComponent, GenreComponent } from './index';
 
 export const FilmRoutes: Routes = [
     { path: 'films', component: FilmComponent },

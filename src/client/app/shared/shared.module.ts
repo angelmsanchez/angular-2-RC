@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HeaderComponent, NavbarComponent, FooterComponent } from './components/index';
+import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent } from './components/index';
 import { ContribService } from './services/index';
 
 @NgModule({
@@ -13,11 +13,13 @@ import { ContribService } from './services/index';
     declarations: [
         HeaderComponent,
         NavbarComponent,
-        FooterComponent],
+        FooterComponent,
+        BackButtonComponent],
     exports: [
         HeaderComponent,
         NavbarComponent,
         FooterComponent,
+        BackButtonComponent,
         FormsModule,
         RouterModule],
     providers: [
