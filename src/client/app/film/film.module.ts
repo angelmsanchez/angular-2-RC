@@ -6,13 +6,13 @@ import { SharedModule } from '../shared/shared.module';
 import { FilmComponent } from './film.component';
 import { FilmService } from './film.service';
 import { GenreComponent } from './genre/genre.component';
-import { routes } from './film.route';
+import { FilmRoutes } from './film.routes';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(routes)],
+        RouterModule.forChild(FilmRoutes)],
     declarations: [
         FilmComponent,
         GenreComponent],

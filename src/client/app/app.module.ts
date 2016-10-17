@@ -11,20 +11,21 @@ import { FilmModule } from './film/film.module';
 import 'rxjs/Rx';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpModule,
-    SharedModule.forRoot(),
-    HomeModule,
-    PomodoroModule,
-    FilmModule],
-  declarations: [
-    AppComponent],
-  providers: [{
-    provide: APP_BASE_HREF,
-    useValue: '<%= APP_BASE %>'
-  }],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        HttpModule,
+        SharedModule,
+        HomeModule,
+        PomodoroModule,
+        FilmModule],
+    declarations: [
+        AppComponent],
+    providers: [{
+        provide: APP_BASE_HREF,
+        useValue: '<%= APP_BASE %>'
+    }],
+    bootstrap: [
+        AppComponent]
 
 })
 

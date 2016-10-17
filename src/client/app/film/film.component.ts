@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { FilmService } from './film.service';
 
@@ -13,7 +14,8 @@ export class FilmComponent {
     public genres: Object[];
     public actualType: string;
 
-    constructor(private filmService: FilmService) {
+    constructor(private router: Router,
+        private filmService: FilmService) {
     }
 
     getList(endPointType: string, type?: string) {
@@ -24,9 +26,8 @@ export class FilmComponent {
             .subscribe((data: any) => this.genres = data.genres);
     }
 
-    goTo(idGenrer: number): boolean {
-        console.log('goTo');
-        window.open();
-        return false;
+    goTo(nameGender: string) {
+        this.router.navigate(['/films', nameGender]);
     }
+
 }
