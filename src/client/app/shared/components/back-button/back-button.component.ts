@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import { Route } from '@angular/router';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -9,23 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class BackButtonComponent implements OnInit {
+
     public enabledButton: boolean = true;
     public valueText: string = 'angel';
 
-    // constructor(private route: Route) {
-    // }
+    constructor(
+        @Inject(window) private _window: any,
+        private route: Router) {
+    }
 
     ngOnInit() {
-        console.log('ngOnInit back button : ');
-        // console.log('ngOnInit back button', this.route);     
-        if (this.valueText === 'home') {
-            this.enabledButton = false;
-        } else {
-            this.enabledButton = true;
-        }
+        console.log('ngOnInit back button', this.route);
     }
 
     goBack() {
         console.log('goBack back button');
+        this._window.history.back();
     }
 }

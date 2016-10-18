@@ -17,16 +17,21 @@ import 'rxjs/Rx';
         SharedModule,
         HomeModule,
         PomodoroModule,
-        FilmModule],
+        FilmModule
+    ],
     declarations: [
-        AppComponent],
+        AppComponent
+    ],
     providers: [{
         provide: APP_BASE_HREF,
         useValue: '<%= APP_BASE %>'
+    }, {
+        provide: window,
+        useValue: window
     }],
     bootstrap: [
-        AppComponent]
-
+        AppComponent
+    ]
 })
 
 export class AppModule { }

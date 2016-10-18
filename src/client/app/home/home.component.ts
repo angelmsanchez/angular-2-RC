@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 // import * as moment from 'moment';
 
@@ -9,12 +10,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['home.css']
 })
 
-export class HomeComponent implements OnInit {
-    day: string;
-    valueLocalStorage: string;
+export class HomeComponent {
+    public day: string;
+    public valueLocalStorage: string;
 
-    ngOnInit() {
-        // this.day = moment().format('dddd DD MMMM  YYYY');
+    constructor(private _router: Router) {
     }
 
     setLocalStorage(value: string): boolean {
@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
 
     getLocalStorage(value: string) {
         this.valueLocalStorage = localStorage.getItem('prueba');
+    }
+
+    goTo(endPoint: string) {
+        this._router.navigate([endPoint]);
     }
 
 }
