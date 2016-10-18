@@ -15,14 +15,14 @@ export class FilmComponent {
     public actualType: string;
 
     constructor(private router: Router,
-        private filmService: FilmService) {
+        private _filmService: FilmService) {
     }
 
     getList(endPointType: string, type?: string) {
         this.actualType = type;
         let endPoint: string = 'genre/' + endPointType + '/list';
-        this.filmService
-            .get(endPoint)
+        this._filmService
+            .getGenres(endPoint)
             .subscribe((data: any) => this.genres = data.genres);
     }
 

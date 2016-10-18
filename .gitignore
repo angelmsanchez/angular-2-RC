@@ -25,6 +25,7 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 typings
+dist
 
 # Users Environment Variables
 .lock-wscript
@@ -37,7 +38,6 @@ typings
 *.iml
 
 /tools/**/*.js
-dist
 dev
 docs
 lib

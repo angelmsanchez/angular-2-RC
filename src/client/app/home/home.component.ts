@@ -17,17 +17,7 @@ export class HomeComponent {
     constructor(private _router: Router) {
     }
 
-    setLocalStorage(value: string): boolean {
-        localStorage.setItem('prueba', value);
-        return false;
-    }
-
-    getLocalStorage(value: string) {
-        this.valueLocalStorage = localStorage.getItem('prueba');
-    }
-
     goTo(endPoint: string) {
         this._router.navigate([endPoint]);
     }
-
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { FilmService } from '../film.service';
 
@@ -9,19 +9,27 @@ import { FilmService } from '../film.service';
     styleUrls: ['./genre.css']
 })
 
-export class GenreComponent {
-    public genres: Object[];
+export class GenreComponent implements OnInit {
+    public films: Object[];
     public actualType: string;
 
-    constructor(private filmService: FilmService) {
-        console.log('GenreComponent');
+    constructor(private _filmService: FilmService) {
     }
 
-    getList(endPointType: string, type?: string) {
+    ngOnInit() {
+        let type: string = '/movies';
+        this.getList(type);
+    }
+
+    getList(type: string) {
         this.actualType = type;
-        let endPoint: string = 'genre/' + endPointType + '/list';
-        this.filmService
-            .get(endPoint)
-            .subscribe((data: any) => this.genres = data.genres);
+        let endPoint: string = 'genre/' + 28 + type;
+        this._filmService
+            .getFilms(endPoint)
+            .subscribe((data: any) => this.films = data.results);
+    }
+
+    goDetail(nameFilm: string) {
+        console.log('goToDetailFilm');
     }
 }

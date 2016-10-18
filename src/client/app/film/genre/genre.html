@@ -1,1 +1,12 @@
-prueba genre html
+<section id="film" class="container">
+
+	<app-back-button></app-back-button>
+
+	<h5>PELICULAS</h5>
+
+	<div *ngFor="let film of films">
+		<button (click)="goDetail(film.original_title)" type="button" class="btn btn-default">
+			<span>{{ film.original_title }}</span>
+		</button>
+	</div>
+</section>
