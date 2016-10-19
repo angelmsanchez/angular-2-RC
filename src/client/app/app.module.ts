@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
-import { FilmModule } from './film/film.module';
+import { VideoClubModule } from './video-club/video-club.module';
 import 'rxjs/Rx';
 
 @NgModule({
@@ -17,7 +17,7 @@ import 'rxjs/Rx';
         SharedModule,
         HomeModule,
         PomodoroModule,
-        FilmModule
+        VideoClubModule
     ],
     declarations: [
         AppComponent

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { FilmService } from '../film.service';
+import { VideoClubService } from '../video-club.service';
 
 @Component({
     moduleId: module.id,
@@ -15,7 +15,7 @@ export class GenreComponent implements OnInit {
     public actualType: string;
     public enabledSpinner: boolean = true;
 
-    constructor(private _filmService: FilmService,
+    constructor(private _filmService: VideoClubService,
         private _route: ActivatedRoute) {
     }
 
@@ -23,8 +23,8 @@ export class GenreComponent implements OnInit {
         this.getId();
     }
 
-    goDetail(film: Object) {
-        console.log('goToDetailFilm', film);
+    goDetail(VideoClub: Object) {
+        console.log('goToDetailFilm', VideoClub);
     }
 
     private getId() {

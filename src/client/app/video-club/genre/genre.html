@@ -1,4 +1,4 @@
-<section id="film" class="container">
+<section id="video-club" class="container">
 
 	<app-back-button></app-back-button>
 
@@ -6,7 +6,7 @@
 	<app-spinner [showOn]="enabledSpinner"></app-spinner>
 	<div *ngFor="let film of films">
 		<button (click)="goDetail(film.original_title)" type="button" class="btn btn-default">
-			<!--<span>{{ film.original_title }}</span>-->
+			<!--<span>{{ VideoClub.original_title }}</span>-->
 			<span>{{ film | json }}</span>
 		</button>
 	</div>

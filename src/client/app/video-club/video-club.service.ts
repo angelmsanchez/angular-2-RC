@@ -4,8 +4,9 @@ import { Http } from '@angular/http';
 import { Config } from '../shared/config/index';
 
 @Injectable()
-export class FilmService {
+export class VideoClubService {
     private _apiKey: string;
+    private _typeVideo: string;
 
     constructor(private http: Http) {
         this.getApiKey();
@@ -22,6 +23,16 @@ export class FilmService {
             .get(Config.API_FILMS + endPoint + this._apiKey)
             .map(response => response.json());
     }
+
+    setType(typeVideo: string) {
+        this._typeVideo = typeVideo;
+    }
+
+    getType() {
+        return this._typeVideo;
+    }
+
+    ///////////////////
 
     private getApiKey() {
         this._apiKey = localStorage.getItem('apiKey');

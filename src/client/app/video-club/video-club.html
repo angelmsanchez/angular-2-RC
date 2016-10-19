@@ -1,13 +1,13 @@
-<section id="film" class="container">
+<section id="video-club" class="container">
 
 	<app-back-button></app-back-button>
 
-	<h5>GENEROS</h5>
+	<h5>Generos del Video Club</h5>
 
-	<button (click)="getList('movie', 'Peliculas')" type="button" class="btn btn-default">
+	<button (click)="getList('movie')" type="button" class="btn btn-default">
 		<span>Peliculas</span>
 	</button>
-	<button (click)="getList('tv', 'Series')" type="button" class="btn btn-default">
+	<button (click)="getList('tv')" type="button" class="btn btn-default">
 		<span>Series</span>
 	</button>
 	<h6 *ngIf="actualType">Generos de {{ actualType }}:</h6>
