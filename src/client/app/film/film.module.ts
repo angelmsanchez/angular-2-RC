@@ -12,15 +12,19 @@ import { FilmRoutes } from './film.routes';
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(FilmRoutes)],
+        RouterModule.forChild(FilmRoutes)
+        ],
     declarations: [
         FilmComponent,
-        GenreComponent],
+        GenreComponent
+        ],
     exports: [
         FilmComponent,
-        RouterModule],
+        RouterModule
+        ],
     providers: [
-        FilmService]
+        FilmService
+        ]
 })
 
 export class FilmModule { }

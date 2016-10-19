@@ -3,27 +3,33 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent } from './components/index';
+import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent, SpinnerComponent } from './components/index';
 import { ContribService } from './services/index';
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule],
+        RouterModule
+    ],
     declarations: [
         HeaderComponent,
         NavbarComponent,
         FooterComponent,
-        BackButtonComponent],
+        BackButtonComponent,
+        SpinnerComponent
+    ],
     exports: [
+        FormsModule,
+        RouterModule,
         HeaderComponent,
         NavbarComponent,
         FooterComponent,
         BackButtonComponent,
-        FormsModule,
-        RouterModule],
+        SpinnerComponent
+    ],
     providers: [
-        ContribService]
+        ContribService
+    ]
 })
 
 export class SharedModule { }

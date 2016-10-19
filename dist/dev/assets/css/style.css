@@ -3428,14 +3428,14 @@ input[type="button"].btn-block {
   width: 18px;
   height: 18px;
   position: relative;
-  border: 2px solid #0078c8;
+  border: 2px solid #ff0000;
   animation: cssload-loader 2.3s infinite ease; }
 
 .cssload-loader-inner {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: #0078c8;
+  background-color: #ff0000;
   animation: cssload-loader-inner 2.3s infinite ease-in; }
 
 @keyframes cssload-loader {

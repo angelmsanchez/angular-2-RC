@@ -2,8 +2,8 @@
 
 	<app-back-button></app-back-button>
 
-	<h5>PELICULAS</h5>
-
+	<h5>Pelicualas del Genero:</h5>
+	<app-spinner [showOn]="enabledSpinner"></app-spinner>
 	<div *ngFor="let film of films">
 		<button (click)="goDetail(film.original_title)" type="button" class="btn btn-default">
 			<!--<span>{{ film.original_title }}</span>-->
