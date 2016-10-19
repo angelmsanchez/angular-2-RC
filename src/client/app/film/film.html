@@ -12,7 +12,7 @@
 	</button>
 	<h6 *ngIf="actualType">Generos de {{ actualType }}:</h6>
 	<div *ngFor="let genre of genres">
-		<button (click)="goTo(genre.name)" type="button" class="btn btn-default">
+		<button (click)="goTo(genre.id)" type="button" class="btn btn-default">
 			<span>{{ genre.name }}</span>
 		</button>
 	</div>

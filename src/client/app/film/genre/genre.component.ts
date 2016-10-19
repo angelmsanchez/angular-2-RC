@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { FilmService } from '../film.service';
 
@@ -13,23 +14,33 @@ export class GenreComponent implements OnInit {
     public films: Object[];
     public actualType: string;
 
-    constructor(private _filmService: FilmService) {
+    constructor(private _filmService: FilmService,
+        private _route: ActivatedRoute) {
     }
 
     ngOnInit() {
-        let type: string = '/movies';
-        this.getList(type);
+        this.getId();
     }
 
-    getList(type: string) {
-        this.actualType = type;
-        let endPoint: string = 'genre/' + 28 + type;
+    goDetail(film: Object) {
+        console.log('goToDetailFilm', film);
+    }
+
+    private getId() {
+        setTimeout(() => {
+            console.log('timeout 2');
+            this._route.params
+                .subscribe(params => {
+                    this.getList(+params['id']);
+                });
+        }, 3000);
+    }
+
+    private getList(idGenre: number) {
+        let endPoint: string = 'genre/' + idGenre + '/movies';
         this._filmService
             .getFilms(endPoint)
-            .subscribe((data: any) => this.films = data.results);
+            .subscribe(data => this.films = data.results);
     }
 
-    goDetail(nameFilm: string) {
-        console.log('goToDetailFilm');
-    }
 }

@@ -6,7 +6,8 @@
 
 	<div *ngFor="let film of films">
 		<button (click)="goDetail(film.original_title)" type="button" class="btn btn-default">
-			<span>{{ film.original_title }}</span>
+			<!--<span>{{ film.original_title }}</span>-->
+			<span>{{ film | json }}</span>
 		</button>
 	</div>
 </section>

@@ -2,18 +2,16 @@
 <html lang="en">
 
 <head>
-    <base href="/">
+    <base href="<%= APP_BASE %>">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
-        Welcome to angular2-seed!
+        <%= APP_TITLE %>
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- inject:css -->
-    <link rel="stylesheet" href="/css/main.css?1476798699776">
-    <link rel="stylesheet" href="/scss/style.css?1476798699778">
     <!-- endinject -->
 </head>
 
@@ -27,31 +25,27 @@
     </script>
 
     <!-- shims:js -->
-    <script src="/node_modules/core-js/client/shim.min.js?1476798699767"></script>
-    <script src="/node_modules/systemjs/dist/system.src.js?1476798699769"></script>
     <!-- endinject -->
 
-    
-        <script src="/app/system-config.js"></script>
-        
+    <% if (ENV === 'dev') { %>
+        <script src="<%= APP_BASE %>app/system-config.js"></script>
+        <% } %>
 
             <!-- libs:js -->
-            <script src="/node_modules/zone.js/dist/zone.js?1476798699772"></script>
-            <script src="/node_modules/.tmp/Rx.min.js?1476798699774"></script>
             <!-- endinject -->
 
             <!-- inject:js -->
             <!-- endinject -->
 
-            
+            <% if (ENV === 'dev') { %>
                 <script>
-                    System.import('app/main')
+                    System.import('<%= BOOTSTRAP_MODULE %>')
                         .catch(function(e) {
                             console.error(e,
                                 'Report this error at https://github.com/mgechev/angular2-seed/issues');
                         });
                 </script>
-                
+                <% } %>
 
 </body>
 

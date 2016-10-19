@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { FilmService } from './film.service';
@@ -10,12 +10,18 @@ import { FilmService } from './film.service';
     styleUrls: ['./film.css']
 })
 
-export class FilmComponent {
+export class FilmComponent implements OnInit {
     public genres: Object[];
     public actualType: string;
 
     constructor(private router: Router,
         private _filmService: FilmService) {
+        console.log('constructor: FilmComponent');
+
+    }
+
+    ngOnInit() {
+        console.log('ngOnInit: FilmComponent');
     }
 
     getList(endPointType: string, type?: string) {
@@ -26,8 +32,8 @@ export class FilmComponent {
             .subscribe((data: any) => this.genres = data.genres);
     }
 
-    goTo(nameGender: string) {
-        this.router.navigate(['/films', nameGender]);
+    goTo(idGender: number) {
+        this.router.navigate(['/films', idGender]);
     }
 
 }
