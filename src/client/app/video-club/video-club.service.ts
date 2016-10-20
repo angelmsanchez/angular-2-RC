@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { Config } from '../shared/config/index';
+import { Genre } from './model/index';
 
 @Injectable()
 export class VideoClubService {
     private _apiKey: string;
-    private _typeVideo: string;
+    private _genre: Genre;
+    private _type: string;
 
     constructor(private http: Http) {
         this.getApiKey();
@@ -24,12 +26,20 @@ export class VideoClubService {
             .map(response => response.json());
     }
 
-    setType(typeVideo: string) {
-        this._typeVideo = typeVideo;
+    setType(type: string) {
+        this._type = type;
     }
 
     getType() {
-        return this._typeVideo;
+        return this._type;
+    }
+
+    setGenre(genrer: Genre) {
+        this._genre = genrer;
+    }
+
+    getGenre() {
+        return this._genre;
     }
 
     ///////////////////

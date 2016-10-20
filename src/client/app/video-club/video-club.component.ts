@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { VideoClubService } from './video-club.service';
+import { Genre } from './model/index';
 
 @Component({
     moduleId: module.id,
@@ -12,30 +12,26 @@ import { VideoClubService } from './video-club.service';
 
 export class VideoClubComponent implements OnInit {
     public genres: Object[];
-    public actualType: string;
+    public type: string;
+    public genre: Genre;
 
-    constructor(private router: Router,
-        private _filmService: VideoClubService) {
+    constructor(private _videoClubService: VideoClubService) {
     }
 
     ngOnInit() {
-        // this.actualType = this._filmService.getType();
-        // if (this.actualType) {
-        //     this.getList(this.actualType);
-        // }
-        console.log('ngOnInit: VideoClubComponent');
+        this.type = this._videoClubService.getType();
+        if (this.type) {
+            this.getList(this.type);
+        }
     }
 
     getList(type: string) {
-        this.actualType = type;
-        let endPoint: string = 'genre/' + this.actualType + '/list';
-        this._filmService
+        this.type = type;
+        this._videoClubService.setType(type);
+        let endPoint: string = 'genre/' + this.type + '/list';
+        this._videoClubService
             .getGenres(endPoint)
             .subscribe((data: any) => this.genres = data.genres);
-    }
-
-    goTo(idGender: number) {
-        this.router.navigate(['/video-club', idGender]);
     }
 
 }

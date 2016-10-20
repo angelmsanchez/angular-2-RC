@@ -10,10 +10,8 @@
 	<button (click)="getList('tv')" type="button" class="btn btn-default">
 		<span>Series</span>
 	</button>
-	<h6 *ngIf="actualType">Generos de {{ actualType }}:</h6>
-	<div *ngFor="let genre of genres">
-		<button (click)="goTo(genre.id)" type="button" class="btn btn-default">
-			<span>{{ genre.name }}</span>
-		</button>
+	<h6 *ngIf="type">Generos de {{ type }}:</h6>
+	<div class="genres" *ngFor="let genre of genres">
+		<app-genre [genre]="genre"></app-genre>
 	</div>
 </section>
