@@ -1,4 +1,18 @@
 @import '../../../../scss/vars';
 #genre {
-    border: 1px solid $brand-primary;
+    padding: 15px 0;
+    text-align: center;
+    div {
+        margin: 0 auto;
+        display: table;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        text-align: center;
+        border: 1px solid $brand-primary;
+        span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
 }
