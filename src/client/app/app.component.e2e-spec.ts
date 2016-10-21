@@ -1,11 +1,11 @@
 describe('App', () => {
 
-  beforeEach( () => {
+  beforeEach(() => {
     browser.get('/');
   });
 
   it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('Welcome to angular2-seed!');
+    expect(browser.getTitle()).toEqual('Welcome to angular-2-RC');
   });
 
   it('should have <nav>', () => {

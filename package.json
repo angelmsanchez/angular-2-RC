@@ -37,10 +37,10 @@
   "author": "Minko Gechev <mgechev>",
   "license": "MIT",
   "devDependencies": {
-    "@angular/compiler-cli": "^0.6.1",
-    "@angular/platform-server": "^2.0.0",
+    "@angular/compiler-cli": "^2.1.0",
+    "@angular/platform-server": "^2.1.0",
     "@angular/tsc-wrapped": "^0.3.0",
-    "@types/async": "^2.0.31",
+    "@types/async": "^2.0.32",
     "@types/browser-sync": "^0.0.32",
     "@types/connect-livereload": "^0.5.29",
     "@types/core-js": "^0.9.32",
@@ -133,23 +133,23 @@
     "yargs": "^4.8.0"
   },
   "dependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/forms": "^2.0.0",
-    "@angular/http": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
-    "@angular/router": "^3.0.0",
+    "@angular/common": "^2.1.0",
+    "@angular/compiler": "^2.1.0",
+    "@angular/core": "^2.1.0",
+    "@angular/forms": "^2.1.0",
+    "@angular/http": "^2.1.0",
+    "@angular/platform-browser": "^2.1.0",
+    "@angular/platform-browser-dynamic": "^2.1.0",
+    "@angular/router": "^3.1.0",
     "bootstrap": "^3.3.7",
-    "core-js": "^2.4.0",
+    "core-js": "^2.4.1",
     "es-module-loader": "^1.0.0",
     "moment": "^2.14.1",
     "ng2-bootstrap": "^1.1.8",
     "redux": "^3.5.2",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
-    "systemjs": "0.19.38",
-    "zone.js": "0.6.23"
+    "systemjs": "0.19.30",
+    "zone.js": "0.6.25"
   }
 }

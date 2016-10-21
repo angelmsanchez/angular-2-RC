@@ -1,13 +1,3 @@
-<section id="video-club" class="container">
-
-	<app-back-button></app-back-button>
-
-	<h5>Peliculas del Genero: {{ genre?.name }}</h5>
-	<app-spinner [showOn]="enabledSpinner"></app-spinner>
-	<div *ngFor="let film of films">
-		<button (click)="goDetail(film.original_title)" type="button" class="btn btn-default">
-			<!--<span>{{ VideoClub.original_title }}</span>-->
-			<span>{{ film | json }}</span>
-		</button>
-	</div>
-</section>
+<div id="film" class="container" (click)="goDetail(film.original_title)">
+	<span>{{ film | json }}</span>
+</div>

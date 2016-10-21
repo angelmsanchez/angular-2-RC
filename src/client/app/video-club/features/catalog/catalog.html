@@ -1,0 +1,10 @@
+<section id="video-club" class="container">
+
+	<app-back-button></app-back-button>
+
+	<h5>Peliculas del Genero: {{ genre?.name }}</h5>
+	<app-spinner [showOn]="enabledSpinner"></app-spinner>
+	<div *ngFor="let film of films">
+		<app-film [film]="film"></app-film>
+	</div>
+</section>

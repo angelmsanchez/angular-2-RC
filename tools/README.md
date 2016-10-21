@@ -1,7 +1,5 @@
 # Tools documentation
 
-This document contains information about the tools section of the `angular2-seed`.
-
 ## General Information
 
 The root of this folder contains the following files:
@@ -13,8 +11,6 @@ The root of this folder contains the following files:
 | `debug.ts`   | Provides the ability to debug a specific build task |
 | `README.md`  | The documentation of the tools section |
 | `utils.ts`   | Exports the utilities provided by the seed barrel file (`/utils/seed.utils.ts`) and the project specific barrel file (`/utils/project.utils.ts`) |
-
-The subfolders provide further folders to distinguish between files which are provided by the seed (located in the corresponding `seed` folder) and files which can be specific by project (to be located in the corresponding `project` folder). This helps you to include updates from the `angular2-seed` without causing conflicts with you personal customisations.
 
 ## Configuration
 
