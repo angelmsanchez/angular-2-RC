@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 import { VideoClubComponent } from './video-club.component';
-import { VideoClubService } from './video-club.service';
+import { VideoClubService, VideoClubResolve } from './services/index';
 import { GenreComponent, CatalogComponent, FilmComponent } from './features/index';
 import { VideoClubRoutes } from './video-club.routes';
 
@@ -25,7 +25,8 @@ import { VideoClubRoutes } from './video-club.routes';
         RouterModule
     ],
     providers: [
-        VideoClubService
+        VideoClubService,
+        VideoClubResolve
     ]
 })
 

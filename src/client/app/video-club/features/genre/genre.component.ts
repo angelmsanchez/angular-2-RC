@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { VideoClubService } from '../../index';
-import { Genre } from '../../model/index';
+import { VideoClubService } from '../../services/index';
+import { Genre } from '../../models/index';
 
 @Component({
     moduleId: module.id,

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
-import { Config } from '../shared/config/index';
-import { Genre, Film } from './models/index';
-import { GenreInterface, FilmInterface } from './interfaces/index';
+import { Config } from '../../shared/config/index';
+import { Genre, Film } from '../models/index';
+import { GenreInterface, FilmInterface } from '../interfaces/index';
 
 @Injectable()
 export class VideoClubService {
@@ -28,6 +28,7 @@ export class VideoClubService {
     getFilms(endPoint: string) {
         return this.http
             .get(Config.API_FILMS + endPoint + this._apiKey)
+            .debounceTime(5000)
             .map((response: Response) => {
                 return <FilmInterface[]>response.json().results.map((film: FilmInterface) => {
                     return new Film(film);
@@ -43,8 +44,8 @@ export class VideoClubService {
         return this._type;
     }
 
-    setGenre(genrer: Genre) {
-        this._genre = genrer;
+    setGenre(genre: Genre) {
+        this._genre = genre;
     }
 
     getGenre() {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { VideoClubService } from './video-club.service';
+import { VideoClubService } from './services/index';
 import { Genre } from './models/index';
 
 @Component({

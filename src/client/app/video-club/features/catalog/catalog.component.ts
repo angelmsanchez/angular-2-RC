@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import { VideoClubService } from '../../video-club.service';
-import { Genre } from '../../model/index';
+import { VideoClubService } from '../../services/index';
+import { Genre, Film } from '../../models/index';
 
 @Component({
     moduleId: module.id,
@@ -12,22 +12,22 @@ import { Genre } from '../../model/index';
 })
 
 export class CatalogComponent implements OnInit {
-    public films: Object[];
+    public films: Film[];
     public enabledSpinner: boolean = true;
     public genre: Genre;
 
     constructor(private _videoClubService: VideoClubService,
-        // private _route: ActivatedRoute,
+        private _activatedRoute: ActivatedRoute,
         private _router: Router) {
     }
 
     ngOnInit() {
+        this.films = this._activatedRoute.snapshot.data['films'];
         this.genre = this._videoClubService.getGenre();
-        if (this.genre) {
-            this.getList();
-        } else {
+        if (!this.genre) {
             this._router.navigate(['video-club']);
         }
+        this.enabledSpinner = false;
     }
 
     // private getId() {
@@ -38,15 +38,5 @@ export class CatalogComponent implements OnInit {
     //             });
     //     }, 3000);
     // }
-
-    private getList() {
-        let endPoint: string = 'genre/' + this.genre.id + '/movies';
-        this._videoClubService
-            .getFilms(endPoint)
-            .subscribe(data => {
-                this.films = data;
-                this.enabledSpinner = false;
-            });
-    }
 
 }

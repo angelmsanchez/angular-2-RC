@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { VideoClubService } from '../../video-club.service';
+import { VideoClubService } from '../../services/index';
+import { Film } from '../../models/index';
 
 @Component({
     moduleId: module.id,
@@ -11,7 +12,7 @@ import { VideoClubService } from '../../video-club.service';
 })
 
 export class FilmComponent implements OnInit {
-    @Input() film: Object;
+    @Input() film: Film;
     public actualType: string;
     public enabledSpinner: boolean = true;
 
@@ -23,8 +24,8 @@ export class FilmComponent implements OnInit {
         console.log('ngOnInit FilmComponent');
     }
 
-    goDetail(VideoClub: Object) {
-        console.log('goToDetailFilm', VideoClub);
+    goDetail(film: Film) {
+        console.log('goToDetailFilm', film);
     }
 
 }
