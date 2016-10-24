@@ -44,7 +44,7 @@ export class CatalogComponent implements OnInit {
         this._videoClubService
             .getFilms(endPoint)
             .subscribe(data => {
-                this.films = data.results;
+                this.films = data;
                 this.enabledSpinner = false;
             });
     }

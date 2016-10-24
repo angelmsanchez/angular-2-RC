@@ -17,6 +17,7 @@ export class GenreComponent {
     constructor(private _router: Router,
         private _videoClubService: VideoClubService) {
     }
+
     goTo(): boolean {
         this._videoClubService.setGenre(this.genre);
         this._router.navigate(['/video-club', this.genre.name]);

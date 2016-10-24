@@ -12,3 +12,5 @@
     #genre div span {
       display: table-cell;
       vertical-align: middle; }
+  #genre :hover {
+    cursor: pointer; }

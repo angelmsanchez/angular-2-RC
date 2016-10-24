@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { VideoClubService } from './video-club.service';
-import { Genre } from './model/index';
+import { Genre } from './models/index';
 
 @Component({
     moduleId: module.id,
@@ -31,7 +31,7 @@ export class VideoClubComponent implements OnInit {
         let endPoint: string = 'genre/' + this.type + '/list';
         this._videoClubService
             .getGenres(endPoint)
-            .subscribe((data: any) => this.genres = data.genres);
+            .subscribe((data: any) => this.genres = data);
     }
 
 }
