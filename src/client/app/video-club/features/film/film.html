@@ -1,3 +1,36 @@
-<div id="film" class="container" (click)="goDetail()">
-	<span>{{ film | json }}</span>
-</div>
+<!--<p>poster_path: {{ film?.poster_path }}</p>-->
+<!--<p>{{ film?.video }}</p>
+	<p>video_average: {{ film?.video_average }}</p>-->
+<!--<p>vote_count: {{ film?.vote_count }}</p>-->
+<section id="film" (click)="goDetail()">
+	<!--<p>adult{{ film?.adult }}</p>-->
+	<div class="image_content">
+		<div class="result">
+			<img [src]="urlImg" alt="film?.original_title">
+			<div class="meta" data-role="tooltip">
+				<p>Ranking de Popularidad</p>
+				<p>{{ film?.popularity }}</p>
+				<!--<p>Hoy: 2</p>
+            <p>Semana Pasada: 4</p>-->
+			</div>
+		</div>
+	</div>
+	<div class="info">
+		<p>
+			<span class="title result">{{ film?.original_title }}</span>
+			<!--<span class="title result">normal: {{ film?.title }}</span>-->
+			<span class="vote_average">5.2<span class="glyphicons glyphicons-star x1 rating movie"></span></span>
+		</p>
+		<p class="meta">
+			<span class="release_date">{{ film?.release_date }} 
+				<span class="glyphicons glyphicons-calendar x1"></span>
+			</span>
+		</p>
+		<p>
+			<span>Generos:</span>
+			<span class="genres" *ngFor="let genre of genreEnum"> {{ genre }} </span>
+			<span *ngIf="true">,</span>
+		</p>
+		<p class="overview">{{ film?.overview }}</p>
+	</div>
+</section>
