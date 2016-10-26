@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 import { VideoClubComponent } from './index';
 import { CatalogComponent, DetailFilmComponent } from './features/index';
-import { VideoClubResolve } from './services/index';
+import { VideoClubResolve, VideoClubActivate } from './services/index';
 
 export const VideoClubRoutes: Route[] = [
     {
@@ -12,6 +12,7 @@ export const VideoClubRoutes: Route[] = [
     {
         path: 'video-club/:name',
         component: CatalogComponent,
+        canActivate: [VideoClubActivate],
         resolve: {
             films: VideoClubResolve
         }

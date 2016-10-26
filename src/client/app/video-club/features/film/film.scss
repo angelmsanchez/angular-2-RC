@@ -5,11 +5,9 @@
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease-out;
-    height: 278px;
-    border: 1px solid gray;
-    // border: 1px solid $brand-primary;
+    border: 1px solid lightgray;
     .image-content {
-        background: red;
+        background: $brand-primary;
     }
     .info {
         font-size: 13px;
