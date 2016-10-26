@@ -2,9 +2,9 @@
 
 	<app-back-button></app-back-button>
 
-	<h5>Peliculas del Genero: {{ genre?.name }}</h5>
+	<h5>Catalogo de {{ genre?.name }}</h5>
 	<app-spinner [showOn]="enabledSpinner"></app-spinner>
 	<div *ngFor="let film of films">
-		<app-film class="col-xs-6 col-sm-4 col-md-3 col-lg-3" [film]="film"></app-film>
+		<app-film class="col-lg-6" [film]="film"></app-film>
 	</div>
 </section>

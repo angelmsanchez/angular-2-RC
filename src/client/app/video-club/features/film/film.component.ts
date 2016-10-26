@@ -25,6 +25,7 @@ export class FilmComponent implements OnInit {
     }
 
     ngOnInit() {
+        console.log('ngOnInit FilmComponent');
         this.urlImg += this.film.poster_path;
         this.getGenres();
     }
@@ -36,7 +37,8 @@ export class FilmComponent implements OnInit {
     }
 
     goDetail() {
-        console.log('goToDetailFilm', this.film);
+        console.log('goToDetailFilm', this.film.original_title);
+        this._router.navigate(['video-club', this.actualType, this.film.original_title]);
     }
 
 }

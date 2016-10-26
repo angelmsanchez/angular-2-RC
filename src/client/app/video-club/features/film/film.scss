@@ -1,8 +1,21 @@
 @import '../../../../scss/vars';
 #film {
-    margin-bottom: 34px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease-out;
-    height: 540px;
-    border: 1px solid $brand-primary;
+    height: 278px;
+    border: 1px solid gray;
+    // border: 1px solid $brand-primary;
+    .image-content {
+        background: red;
+    }
+    .info {
+        font-size: 13px;
+        padding: 10px;
+        >div {
+            margin-bottom: 10px;
+        }
+    }
 }

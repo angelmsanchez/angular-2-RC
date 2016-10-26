@@ -4,8 +4,8 @@
   #genre div {
     margin: 0 auto;
     display: table;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     text-align: center;
     border: 1px solid #ff0000; }

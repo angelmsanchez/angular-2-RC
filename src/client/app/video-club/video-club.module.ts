@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { VideoClubComponent } from './video-club.component';
 import { VideoClubService, VideoClubResolve } from './services/index';
-import { GenreComponent, CatalogComponent, FilmComponent } from './features/index';
+import { GenreComponent, CatalogComponent, FilmComponent, DetailFilmComponent } from './features/index';
 import { VideoClubRoutes } from './video-club.routes';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { VideoClubRoutes } from './video-club.routes';
         VideoClubComponent,
         GenreComponent,
         CatalogComponent,
-        FilmComponent
+        FilmComponent,
+        DetailFilmComponent
     ],
     exports: [
         VideoClubComponent,

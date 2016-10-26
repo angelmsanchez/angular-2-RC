@@ -12,8 +12,8 @@ export class VideoClubResolve implements Resolve<FilmInterface[]> {
     }
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<FilmInterface[]> {
-        const endPoint = 'genre/' + this._videoClubService.getGenre().id + '/movies';
-        return this._videoClubService.getFilms(endPoint);
+        const id: number = this._videoClubService.getGenre().id;
+        return this._videoClubService.getFilms(id);
     }
 
 }

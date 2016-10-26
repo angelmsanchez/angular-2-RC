@@ -10,6 +10,7 @@ export class VideoClubService {
     private _apiKey: string;
     private _genre: Genre;
     private _type: string;
+    private _filmsById: any = {};
 
     constructor(private http: Http) {
         this.getApiKey();
@@ -25,15 +26,22 @@ export class VideoClubService {
             });
     }
 
-    getFilms(endPoint: string) {
-        return this.http
-            .get(Config.API_FILMS + endPoint + this._apiKey)
-            .debounceTime(5000)
-            .map((response: Response) => {
-                return <FilmInterface[]>response.json().results.map((film: FilmInterface) => {
-                    return new Film(film);
+    getFilms(id: number) {
+        if (!this._filmsById[id]) {
+            const endPoint = 'genre/' + id + '/movies';
+            return this.http
+                .get(Config.API_FILMS + endPoint + this._apiKey)
+                .debounceTime(5000)
+                .map((response: Response) => {
+                    this._filmsById[id] = <FilmInterface[]>response.json().results.map((film: FilmInterface) => {
+                        return new Film(film);
+                    });
+                    return this._filmsById[id];
                 });
-            });
+        } else {
+            return this._filmsById[id];
+        }
+
     }
 
     setType(type: string) {
