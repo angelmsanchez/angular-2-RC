@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-// import { Observable } from 'rxjs/Observable';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 import { Config } from '../config/index';
 
@@ -29,7 +29,7 @@ export class ContribService {
   getContrib(endPoint: string) {
     return this.http
       .get(Config.API_LOCALHOST + endPoint)
-      .map(response => response.json());
+      .map(response => response.json())
   }
 
 }
