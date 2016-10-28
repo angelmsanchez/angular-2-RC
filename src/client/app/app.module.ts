@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/index';
     imports: [
         BrowserModule,
         HttpModule,
+        AppRoutingModule,
         SharedModule,
         HomeModule,
         PomodoroModule,

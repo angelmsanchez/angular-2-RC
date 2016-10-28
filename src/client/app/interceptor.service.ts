@@ -13,11 +13,11 @@ export class InterceptorHttp extends Http {
     }
 
     request(url: string | Request, options?: RequestOptionsArgs): Observable<Response> {
-        // this._router.navigate(['video-club']);
         return super
             .request(url, options)
-            .catch((res: Response) => {
+            .catch((error: Response) => {
                 console.log('catch request');
+                return Observable.throw(error.json().error || 'Server error');
                 // this._router.navigate(['']);
             });
     }
