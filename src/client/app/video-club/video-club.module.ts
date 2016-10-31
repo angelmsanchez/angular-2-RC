@@ -6,13 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 import { VideoClubComponent } from './video-club.component';
 import { VideoClubService, VideoClubResolve, VideoClubActivate } from './services/index';
 import { GenreComponent, CatalogComponent, FilmComponent, DetailFilmComponent } from './features/index';
-import { VideoClubRoutes } from './video-club.routes';
+import { VideoClubRoutingModule, routedComponents } from './video-club.routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
-        RouterModule.forChild(VideoClubRoutes)
+        VideoClubRoutingModule
+        // RouterModule.forChild(VideoClubRoutes)
     ],
     declarations: [
         VideoClubComponent,
@@ -23,7 +24,8 @@ import { VideoClubRoutes } from './video-club.routes';
     ],
     exports: [
         VideoClubComponent,
-        RouterModule
+        // RouterModule
+        routedComponents
     ],
     providers: [
         VideoClubService,

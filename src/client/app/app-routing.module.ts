@@ -4,12 +4,16 @@ import { PreloadAllModules, NoPreloading, Routes, RouterModule } from '@angular/
 // import { AuthGuard, CanDeactivateGuard, UserProfileService } from './core';
 // import { PageNotFoundComponent } from './page-not-found.component';
 import { PreloadSelectedModulesList } from './core/config/index';
+import { HomeComponent } from './home/index';
+import { PomodoroComponent } from './pomodoro/index';
+import { VideoClubComponent } from './video-club/index';
 
 const routes: Routes = [
     {
         path: '',
-        pathMatch: 'full',
-        redirectTo: 'dashboard'
+        component: HomeComponent
+        //     pathMatch: 'full',
+        //     redirectTo: 'video-club'
     },
     // {
     //     path: 'admin',
@@ -18,19 +22,24 @@ const routes: Routes = [
     //     canLoad: [AuthGuard]
     // },
     {
-        path: 'dashboard',
-        loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
+        path: 'pomodoro',
+        component: PomodoroComponent,
         data: { preload: true }
     },
     {
-        path: 'speakers',
-        loadChildren: 'app/speakers/speakers.module#SpeakersModule',
-        data: { preload: true }
+        path: 'video-club',
+        component: VideoClubComponent,
+        // loadChildren: 'src/client/app/vdieo-club/video-club.module#VideoClubModule'
     },
-    {
-        path: 'sessions',
-        loadChildren: 'app/sessions/sessions.module#SessionsModule'
-    },
+    // {
+    //     path: 'speakers',
+    //     loadChildren: 'app/speakers/speakers.module#SpeakersModule',
+    //     data: { preload: true }
+    // },
+    // {
+    //     path: 'sessions',
+    //     loadChildren: 'app/sessions/sessions.module#SessionsModule'
+    // },
     // {
     //     path: '**',
     //     pathMatch: 'full',

@@ -6,18 +6,18 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home.component';
-import { HomeRoutes } from './home.routes';
 
 @NgModule({
     imports: [
         CommonModule,
         SharedModule,
-        AlertModule,
-        RouterModule.forRoot(HomeRoutes)],
+        AlertModule
+    ],
     declarations: [
-        HomeComponent],
+        HomeComponent
+    ],
     exports: [
-        HomeComponent,
-        RouterModule]
+        HomeComponent
+    ]
 })
 export class HomeModule { }
