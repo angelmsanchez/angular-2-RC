@@ -13,23 +13,23 @@ const routes: Routes = [
     {
         path: '',
         component: VideoClubComponent,
-        data: {
-            title: 'Video Club Component'
-        },
+        // data: {
+        //     title: 'Video Club Component'
+        // },
         children: [
             {
                 path: '/:name',
                 component: CatalogComponent,
-                canActivate: [VideoClubActivate],
-                resolve: {
-                    films: VideoClubResolve
-                },
-                children: [
-                    {
-                        path: '/:film',
-                        component: DetailFilmComponent
-                    }
-                ]
+                // canActivate: [VideoClubActivate],
+                // resolve: {
+                //     films: VideoClubResolve
+                // },
+                // children: [
+                //     {
+                //         path: '/:film',
+                //         component: DetailFilmComponent
+                //     }
+                // ]
             }
         ]
     }

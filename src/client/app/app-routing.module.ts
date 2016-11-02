@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, NoPreloading, Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 // import { AuthGuard, CanDeactivateGuard, UserProfileService } from './core';
 // import { PageNotFoundComponent } from './page-not-found.component';
@@ -11,9 +11,8 @@ import { VideoClubComponent } from './video-club/index';
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
-        //     pathMatch: 'full',
-        //     redirectTo: 'video-club'
+        pathMatch: 'full',
+        redirectTo: 'home'
     },
     // {
     //     path: 'admin',
@@ -22,15 +21,23 @@ const routes: Routes = [
     //     canLoad: [AuthGuard]
     // },
     {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
         path: 'pomodoro',
         component: PomodoroComponent,
         data: { preload: true }
     },
     {
         path: 'video-club',
-        component: VideoClubComponent,
-        // loadChildren: 'src/client/app/vdieo-club/video-club.module#VideoClubModule'
+        component: VideoClubComponent
     },
+    // {
+    //     path: '**',
+    //     pathMatch: 'full',
+    //     component: PageNotFoundComponent
+    // }
     // {
     //     path: 'speakers',
     //     loadChildren: 'app/speakers/speakers.module#SpeakersModule',
