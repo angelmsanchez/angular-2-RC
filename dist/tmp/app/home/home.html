@@ -1,27 +1,26 @@
 <section id="home" class="main">
-	<!--TODO:FALTA SPINNER-->
-	<!--<spinner [showOn]="activeSpinner"></spinner>-->
-	<div class="container">
-		<div class="row">
-			<h3 class="title color-primary col-lg-6">Angular 2</h3>
-			<h6 class="subtitle col-lg-6">{{day}}</h6>
-		</div>
-	</div>
+    <app-spinner [showOn]="activeSpinner"></app-spinner>
+    <div class="container">
+        <div class="row">
+            <h3 class="title color-primary col-lg-6">Angular 2</h3>
+            <h6 class="subtitle col-lg-6">{{day}}</h6>
+        </div>
+    </div>
 
-	<div class="container">
-		<div class="row">
-			<ul class="title">
-				<h5>Web components</h5>
-				<li><a (click)="goTo('pomodoro')">Pomodoro</a></li>
-				<li><a (click)="goTo('video-club')">Video Club</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <ul class="title">
+                <h5>Web components</h5>
+                <li><a (click)="goTo('pomodoro')">Pomodoro</a></li>
+                <li><a (click)="goTo('video-club')">Video Club</a></li>
+            </ul>
+        </div>
+    </div>
 
-	<div class="container">
-		<div class="row">
-			<h5>Example ng2-bootstrap</h5>
-			<alert type="success">hello ng2-bootstrap world ;) </alert>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <h5>Example ng2-bootstrap</h5>
+            <alert type="success">hello ng2-bootstrap world ;) </alert>
+        </div>
+    </div>
 </section>

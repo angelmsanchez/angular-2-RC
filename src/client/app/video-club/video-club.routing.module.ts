@@ -1,37 +1,29 @@
-// import { Route } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Route } from '@angular/router';
 
-// import { VideoClubComponent } from './index';
+import { AuthService } from './../shared/services/auth.service';
+import { VideoClubComponent } from './video-club.component';
 import { CatalogComponent, DetailFilmComponent } from './features/index';
 import { VideoClubResolve, VideoClubActivate } from './services/index';
 
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { VideoClubComponent } from './index';
-
-const routes: Routes = [
+export const routes: Route[] = [
     {
-        path: '',
+        path: 'video-club',
         component: VideoClubComponent,
-        // data: {
-        //     title: 'Video Club Component'
-        // },
-        children: [
-            {
-                path: '/:name',
-                component: CatalogComponent,
-                // canActivate: [VideoClubActivate],
-                // resolve: {
-                //     films: VideoClubResolve
-                // },
-                // children: [
-                //     {
-                //         path: '/:film',
-                //         component: DetailFilmComponent
-                //     }
-                // ]
-            }
-        ]
+        // canActivate: [AuthService]
+    },
+    {
+        path: 'video-club/:name',
+        component: CatalogComponent,
+        canActivate: [VideoClubActivate],
+        resolve: {
+            films: VideoClubResolve
+        }
+    },
+    {
+        path: 'video-club/:name/:film',
+        component: DetailFilmComponent,
+        canActivate: [VideoClubActivate],
     }
 ];
 
@@ -42,32 +34,8 @@ const routes: Routes = [
     exports: [
         RouterModule
     ],
+    providers: [
+        AuthService
+    ]
 })
 export class VideoClubRoutingModule { }
-
-export const routedComponents = [VideoClubComponent];
-
-// export const VideoClubRoutes: Route[] = [
-    // {
-    //     path: '',
-    //     component: VideoClubComponent,
-    //     data: {
-    //         title: 'Video Club Component'
-    //     },
-    //     children: [
-    //         {
-    //             path: '/:name',
-    //             component: CatalogComponent,
-    //             canActivate: [VideoClubActivate],
-    //             resolve: {
-    //                 films: VideoClubResolve
-    //             },
-    //             children: [
-    //                 {
-    //                     path: '/:film',
-    //                     component: DetailFilmComponent
-    //                 }
-    //             ]
-    //         }
-    //     ]
-    // }];

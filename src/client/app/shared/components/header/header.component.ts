@@ -12,8 +12,9 @@ import { Constants } from '../../constants/index';
 export class HeaderComponent implements OnInit {
     public headerContent: Object;
     public urlImg: String;
+    public speakers: Object;
 
-    constructor(private contribService: ContribService) {
+    constructor(private _contribService: ContribService) {
     }
 
     ngOnInit() {
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit {
     }
 
     contribComun() {
-        this.contribService
+        this._contribService
             .getContrib('comun')
             .subscribe((data: any) => this.headerContent = data);
     }
@@ -33,4 +34,5 @@ export class HeaderComponent implements OnInit {
         }
         return false;
     }
+
 }

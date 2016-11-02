@@ -12,7 +12,6 @@ import { SharedModule } from './shared/shared.module';
 import { PomodoroModule } from './pomodoro/pomodoro.module';
 import { VideoClubModule } from './video-club/video-club.module';
 import { InterceptorHttp } from './interceptor.service';
-import { HomeComponent } from './home/index';
 
 @NgModule({
     imports: [
@@ -22,24 +21,25 @@ import { HomeComponent } from './home/index';
         SharedModule,
         HomeModule,
         PomodoroModule,
-        VideoClubModule,
+        VideoClubModule
     ],
     declarations: [
         AppComponent
     ],
-    providers: [{
-        provide: APP_BASE_HREF,
-        useValue: '<%= APP_BASE %>'
-    }, {
-        provide: window,
-        useValue: window
-    },
-    {
-        provide: Http,
-        useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, router: Router) => new InterceptorHttp(backend, defaultOptions, router),
-        deps: [XHRBackend, RequestOptions]
-    }
-    ],
+    providers: [
+        {
+            provide: APP_BASE_HREF,
+            useValue: '<%= APP_BASE %>'
+        }, {
+            provide: window,
+            useValue: window
+        },
+        {
+            provide: Http,
+            useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, router: Router) =>
+                new InterceptorHttp(backend, defaultOptions, router),
+            deps: [XHRBackend, RequestOptions]
+        }],
     bootstrap: [
         AppComponent
     ]

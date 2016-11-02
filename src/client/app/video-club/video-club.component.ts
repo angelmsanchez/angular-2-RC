@@ -14,6 +14,7 @@ export class VideoClubComponent implements OnInit {
     public genres: Object[];
     public type: string;
     public genre: Genre;
+    public activeSpinner: boolean = false;
 
     constructor(private _videoClubService: VideoClubService) {
     }
@@ -26,12 +27,19 @@ export class VideoClubComponent implements OnInit {
     }
 
     getList(type: string) {
+        this.activeSpinner = true;
         this.type = type;
         this._videoClubService.setType(type);
         let endPoint: string = 'genre/' + this.type + '/list';
-        this._videoClubService
-            .getGenres(endPoint)
-            .subscribe((data: any) => this.genres = data);
+        setTimeout(() => {
+            this._videoClubService
+                .getGenres(endPoint)
+                .subscribe((data: any) => {
+                    this.genres = data;
+                    this.activeSpinner = false;
+                });
+        }, 3000);
+
     }
 
 }

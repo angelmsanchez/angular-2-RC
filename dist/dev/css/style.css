@@ -3535,6 +3535,10 @@ fieldset[disabled] .form-control {
   margin-top: 1.875rem;
 }
 
+#splash .content img {
+  width: 100px;
+}
+
 .alert {
   border-width: 2px;
   border-style: solid;
@@ -5195,7 +5199,7 @@ input[type="button"].btn-block {
   width: 18px;
   height: 18px;
   position: relative;
-  border: 2px solid #0078c8;
+  border: 2px solid #ff0000;
   -webkit-animation: cssload-loader 2.3s infinite ease;
           animation: cssload-loader 2.3s infinite ease;
 }
@@ -5204,7 +5208,7 @@ input[type="button"].btn-block {
   vertical-align: top;
   display: inline-block;
   width: 100%;
-  background-color: #0078c8;
+  background-color: #ff0000;
   -webkit-animation: cssload-loader-inner 2.3s infinite ease-in;
           animation: cssload-loader-inner 2.3s infinite ease-in;
 }

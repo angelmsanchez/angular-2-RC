@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContribService } from './../shared/services/contrib.service';
 
 // import * as moment from 'moment';
 
@@ -10,11 +11,15 @@ import { Router } from '@angular/router';
     styleUrls: ['home.css']
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     public day: string;
-    public valueLocalStorage: string;
+    public activeSpinner: boolean = true;
 
     constructor(private _router: Router) {
+    }
+
+    ngOnInit() {
+        setTimeout(() => this.activeSpinner = false, 5000);
     }
 
     goTo(endPoint: string) {

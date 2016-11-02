@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { PreloadSelectedModulesList } from './core/config/index';
 import { HomeComponent } from './home/index';
 import { PomodoroComponent } from './pomodoro/index';
-import { VideoClubComponent } from './video-club/index';
 
 const routes: Routes = [
     {
@@ -28,10 +27,6 @@ const routes: Routes = [
         path: 'pomodoro',
         component: PomodoroComponent,
         data: { preload: true }
-    },
-    {
-        path: 'video-club',
-        component: VideoClubComponent
     },
     // {
     //     path: '**',

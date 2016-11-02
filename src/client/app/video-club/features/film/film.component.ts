@@ -25,8 +25,8 @@ export class FilmComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log('ngOnInit FilmComponent');
         this.urlImg += this.film.poster_path;
+        this.actualType = this._videoClubService.getGenre().name;
         this.getGenres();
     }
 

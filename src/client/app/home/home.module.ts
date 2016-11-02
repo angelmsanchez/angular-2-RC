@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { SharedModule } from '../shared/shared.module';
