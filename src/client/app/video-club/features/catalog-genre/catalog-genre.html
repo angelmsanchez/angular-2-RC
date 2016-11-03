@@ -1,6 +1,7 @@
 <section id="catalog-genre" class="main">
     <div class="container">
         <app-back-button></app-back-button>
+        <app-spinner [showOn]="activeSpinner"></app-spinner>
         <h4 class="title">Generos del Video Club</h4>
         <div class="genres">
             <button (click)="getList('movie')" type="button" class="btn btn-default">

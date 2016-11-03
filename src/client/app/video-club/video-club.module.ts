@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { VideoClubComponent } from './video-club.component';
 import { VideoClubService, VideoClubResolve, VideoClubActivate } from './services/index';
-import { CatalogGenreComponent, GenreComponent, CatalogComponent, FilmComponent, DetailFilmComponent } from './features/index';
+import { CatalogGenreComponent, GenreComponent, CatalogFilmComponent, FilmComponent, DetailFilmComponent } from './features/index';
 import { VideoClubRoutingModule } from './video-club.routing.module';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { VideoClubRoutingModule } from './video-club.routing.module';
         VideoClubComponent,
         CatalogGenreComponent,
         GenreComponent,
-        CatalogComponent,
+        CatalogFilmComponent,
         FilmComponent,
         DetailFilmComponent
     ],

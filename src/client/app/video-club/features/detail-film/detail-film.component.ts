@@ -20,8 +20,9 @@ export class DetailFilmComponent implements OnInit {
     }
 
     ngOnInit() {
-        let title: string = this._activatedRoute.snapshot.data['name'];
-        console.log('ngOnInit DetailFilmComponent: ', title);
+        let name: string = this._activatedRoute.snapshot.params['name'];
+        let title: string = this._activatedRoute.snapshot.params['title'];
+        console.log('ngOnInit DetailFilmComponent: '+name + ' y '+ title);
     }
 
 }

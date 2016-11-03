@@ -6,12 +6,12 @@ import { Genre, Film } from '../../models/index';
 
 @Component({
     moduleId: module.id,
-    selector: 'app-catalog',
-    templateUrl: './catalog.html',
-    styleUrls: ['./catalog.css']
+    selector: 'app-catalog-film',
+    templateUrl: './catalog-film.html',
+    styleUrls: ['./catalog-film.css']
 })
 
-export class CatalogComponent implements OnInit {
+export class CatalogFilmComponent implements OnInit {
     public films: Film[];
     public enabledSpinner: boolean = true;
     public genre: Genre;

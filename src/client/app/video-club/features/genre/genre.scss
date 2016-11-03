@@ -10,12 +10,22 @@
         border-radius: 50%;
         text-align: center;
         border: 1px solid $brand-primary;
+        color: $brand-primary;
         span {
             display: table-cell;
             vertical-align: middle;
         }
     }
      :hover {
-        cursor: pointer
+        color: white;
+        background-color: $brand-primary;
+        cursor: pointer;
+        border: none;
+        margin: 0 auto;
+        display: table;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        text-align: center;
     }
 }

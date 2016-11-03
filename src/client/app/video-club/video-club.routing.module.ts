@@ -3,50 +3,28 @@ import { RouterModule, Route } from '@angular/router';
 
 import { AuthService } from './../shared/services/auth.service';
 import { VideoClubComponent } from './video-club.component';
-import { CatalogGenreComponent, CatalogComponent, DetailFilmComponent } from './features/index';
+import { CatalogGenreComponent, CatalogFilmComponent, DetailFilmComponent } from './features/index';
 import { VideoClubResolve, VideoClubActivate } from './services/index';
-
-// export const routes: Route[] = [
-//     {
-//         path: 'video-club',
-//         component: VideoClubComponent,
-//         // canActivate: [AuthService]
-//     },
-//     {
-//         path: 'video-club/:name',
-//         component: CatalogComponent,
-//         canActivate: [VideoClubActivate],
-//         resolve: {
-//             films: VideoClubResolve
-//         }
-//     },
-//     {
-//         path: 'video-club/:name/:film',
-//         component: DetailFilmComponent,
-//         canActivate: [VideoClubActivate],
-//     }
-// ];
 
 export const routes: Route[] = [
     {
         path: 'video-club',
         component: VideoClubComponent,
-        // canActivate: [AuthService]
         children: [
             {
                 path: '',
                 component: CatalogGenreComponent
             },
             {
-                path: '/:name',
-                component: CatalogComponent,
+                path: ':name',
+                component: CatalogFilmComponent,
                 canActivate: [VideoClubActivate],
                 resolve: {
                     films: VideoClubResolve
                 }
             },
             {
-                path: '/:name/:film',
+                path: ':name/:film',
                 component: DetailFilmComponent,
                 canActivate: [VideoClubActivate],
             }
@@ -60,9 +38,6 @@ export const routes: Route[] = [
     ],
     exports: [
         RouterModule
-    ],
-    providers: [
-        AuthService
     ]
 })
 export class VideoClubRoutingModule { }

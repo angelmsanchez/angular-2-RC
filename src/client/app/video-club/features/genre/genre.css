@@ -8,9 +8,19 @@
     width: 100px;
     border-radius: 50%;
     text-align: center;
-    border: 1px solid #ff0000; }
+    border: 1px solid #ff0000;
+    color: #ff0000; }
     #genre div span {
       display: table-cell;
       vertical-align: middle; }
   #genre :hover {
-    cursor: pointer; }
+    color: white;
+    background-color: #ff0000;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    display: table;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center; }

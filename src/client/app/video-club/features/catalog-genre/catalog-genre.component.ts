@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 
 import { VideoClubService } from '../../services/index';
-import { Genre, Film } from '../../models/index';
+import { Genre } from '../../models/index';
 
 @Component({
     moduleId: module.id,
@@ -12,19 +11,14 @@ import { Genre, Film } from '../../models/index';
 })
 
 export class CatalogGenreComponent implements OnInit {
-    public genres: Object[];
+    public genres: Genre[];
     public type: string;
-    public genre: Genre;
     public activeSpinner: boolean = false;
 
-    constructor(private _videoClubService: VideoClubService,
-        private _activatedRoute: ActivatedRoute,
-        private _router: Router) {
-        console.log('catalog-genre-component');
+    constructor(private _videoClubService: VideoClubService) {
     }
 
     ngOnInit() {
-        console.log('catalog-genre-component');
         this.type = this._videoClubService.getType();
         if (this.type) {
             this.getList(this.type);
@@ -43,7 +37,7 @@ export class CatalogGenreComponent implements OnInit {
                     this.genres = data;
                     this.activeSpinner = false;
                 });
-        }, 3000);
+        }, 1000);
 
     }
 }
