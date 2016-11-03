@@ -20,7 +20,7 @@ export class VideoClubActivate implements CanActivate {
 
         if (existGenre) { return true; };
 
-        this._router.navigate(['/home']);
+        this._router.navigate(['/video-club']);
         return false;
     }
 }

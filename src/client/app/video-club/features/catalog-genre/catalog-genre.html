@@ -1,0 +1,18 @@
+<section id="catalog-genre" class="main">
+    <div class="container">
+        <app-back-button></app-back-button>
+        <h4 class="title">Generos del Video Club</h4>
+        <div class="genres">
+            <button (click)="getList('movie')" type="button" class="btn btn-default">
+				<span>Movies</span>
+			</button>
+            <button (click)="getList('tv')" type="button" class="btn btn-default">
+				<span>Series</span>
+			</button>
+        </div>
+        <h4 class="title genre" *ngIf="type">Generos de {{ type }}:</h4>
+    </div>
+    <div class="row">
+        <app-genre *ngFor="let genre of genres" class="col-xs-4 col-sm-3 col-md-2 col-lg-2" [genre]="genre"></app-genre>
+    </div>
+</section>

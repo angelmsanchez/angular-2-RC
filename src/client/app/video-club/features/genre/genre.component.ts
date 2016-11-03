@@ -20,6 +20,8 @@ export class GenreComponent {
 
     goTo(): boolean {
         this._videoClubService.setGenre(this.genre);
+        console.log('goTo ' + this.genre.name):
+        // this._router.navigate(['/video-club', this.genre.name]);
         this._router.navigate(['/video-club', this.genre.name]);
         return false;
     }

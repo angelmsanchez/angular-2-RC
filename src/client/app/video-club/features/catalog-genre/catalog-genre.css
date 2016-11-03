@@ -1,0 +1,15 @@
+#catalog-genre {
+  margin-bottom: 30px; }
+  #catalog-genre button {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 0px 30px;
+    margin-right: 20px; }
+  #catalog-genre .title {
+    color: #ff0000;
+    text-align: center; }
+    #catalog-genre .title.genre {
+      margin-top: 30px; }
+  #catalog-genre .genres {
+    margin-top: 20px;
+    text-align: center; }

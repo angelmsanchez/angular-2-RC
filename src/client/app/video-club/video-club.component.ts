@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { VideoClubService } from './services/index';
-import { Genre } from './models/index';
 
 @Component({
     moduleId: module.id,
@@ -11,35 +10,14 @@ import { Genre } from './models/index';
 })
 
 export class VideoClubComponent implements OnInit {
-    public genres: Object[];
-    public type: string;
-    public genre: Genre;
-    public activeSpinner: boolean = false;
+    public activeSpinner: boolean;
 
     constructor(private _videoClubService: VideoClubService) {
     }
 
     ngOnInit() {
-        this.type = this._videoClubService.getType();
-        if (this.type) {
-            this.getList(this.type);
-        }
-    }
-
-    getList(type: string) {
-        this.activeSpinner = true;
-        this.type = type;
-        this._videoClubService.setType(type);
-        let endPoint: string = 'genre/' + this.type + '/list';
-        setTimeout(() => {
-            this._videoClubService
-                .getGenres(endPoint)
-                .subscribe((data: any) => {
-                    this.genres = data;
-                    this.activeSpinner = false;
-                });
-        }, 3000);
-
+        this.activeSpinner = this._videoClubService.getEnabledSpinner();
+        console.log('VideoClubComponent ' + this.activeSpinner);
     }
 
 }

@@ -21,12 +21,4 @@ export class InterceptorHttp extends Http {
                 // this._router.navigate(['']);
             });
     }
-
-    // get(url: string, options?: RequestOptionsArgs): Observable<Response> {
-    //     return super
-    //         .get(url, options)
-    //         .catch((error) => {
-    //             console.log('super get: ', error);
-    //         });
-    // }
 }

@@ -3,27 +3,54 @@ import { RouterModule, Route } from '@angular/router';
 
 import { AuthService } from './../shared/services/auth.service';
 import { VideoClubComponent } from './video-club.component';
-import { CatalogComponent, DetailFilmComponent } from './features/index';
+import { CatalogGenreComponent, CatalogComponent, DetailFilmComponent } from './features/index';
 import { VideoClubResolve, VideoClubActivate } from './services/index';
+
+// export const routes: Route[] = [
+//     {
+//         path: 'video-club',
+//         component: VideoClubComponent,
+//         // canActivate: [AuthService]
+//     },
+//     {
+//         path: 'video-club/:name',
+//         component: CatalogComponent,
+//         canActivate: [VideoClubActivate],
+//         resolve: {
+//             films: VideoClubResolve
+//         }
+//     },
+//     {
+//         path: 'video-club/:name/:film',
+//         component: DetailFilmComponent,
+//         canActivate: [VideoClubActivate],
+//     }
+// ];
 
 export const routes: Route[] = [
     {
         path: 'video-club',
         component: VideoClubComponent,
         // canActivate: [AuthService]
-    },
-    {
-        path: 'video-club/:name',
-        component: CatalogComponent,
-        canActivate: [VideoClubActivate],
-        resolve: {
-            films: VideoClubResolve
-        }
-    },
-    {
-        path: 'video-club/:name/:film',
-        component: DetailFilmComponent,
-        canActivate: [VideoClubActivate],
+        children: [
+            {
+                path: '',
+                component: CatalogGenreComponent
+            },
+            {
+                path: '/:name',
+                component: CatalogComponent,
+                canActivate: [VideoClubActivate],
+                resolve: {
+                    films: VideoClubResolve
+                }
+            },
+            {
+                path: '/:name/:film',
+                component: DetailFilmComponent,
+                canActivate: [VideoClubActivate],
+            }
+        ]
     }
 ];
 

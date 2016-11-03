@@ -11,9 +11,14 @@ export class VideoClubService {
     private _genre: Genre;
     private _type: string;
     private _filmsById: any = {};
+    private _enalbedSpinner: boolean = false;
 
     constructor(private http: Http) {
         this.getApiKey();
+    }
+
+    getEnabledSpinner(): boolean {
+        return this._enalbedSpinner;
     }
 
     getGenres(endPoint: string) {
