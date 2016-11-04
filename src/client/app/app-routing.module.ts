@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PreloadSelectedModulesList } from './core/config/index';
 import { HomeComponent } from './home/index';
 import { PomodoroComponent } from './pomodoro/index';
+import { CanLoadService } from './shared/services/index';
 
 const routes: Routes = [
     {
@@ -28,25 +29,17 @@ const routes: Routes = [
         component: PomodoroComponent,
         data: { preload: true }
     },
+    {
+        path: 'video-club',
+        loadChildren: 'app/video-club/video-club.module#VideoClubModule',
+        canLoad: [CanLoadService]
+
+    }
     // {
     //     path: '**',
     //     pathMatch: 'full',
     //     component: PageNotFoundComponent
     // }
-    // {
-    //     path: 'speakers',
-    //     loadChildren: 'app/speakers/speakers.module#SpeakersModule',
-    //     data: { preload: true }
-    // },
-    // {
-    //     path: 'sessions',
-    //     loadChildren: 'app/sessions/sessions.module#SessionsModule'
-    // },
-    // {
-    //     path: '**',
-    //     pathMatch: 'full',
-    //     component: PageNotFoundComponent
-    // },
 ];
 
 @NgModule({

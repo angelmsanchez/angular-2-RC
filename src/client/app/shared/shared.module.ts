@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent, SpinnerComponent } from './components/index';
-import { ContribService, ExceptionService, AuthService } from './services/index';
+import { ContribService, ExceptionService, AuthService, CanLoadService } from './services/index';
 
 @NgModule({
     imports: [
@@ -30,7 +30,8 @@ import { ContribService, ExceptionService, AuthService } from './services/index'
     providers: [
         ContribService,
         ExceptionService,
-        AuthService
+        AuthService,
+        CanLoadService
     ]
 })
 

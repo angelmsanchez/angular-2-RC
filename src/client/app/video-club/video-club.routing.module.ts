@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 
-import { AuthService } from './../shared/services/auth.service';
 import { VideoClubComponent } from './video-club.component';
 import { CatalogGenreComponent, CatalogFilmComponent, DetailFilmComponent } from './features/index';
 import { VideoClubResolve, VideoClubActivate } from './services/index';
 
 export const routes: Route[] = [
     {
-        path: 'video-club',
+        path: '',
         component: VideoClubComponent,
         children: [
             {
