@@ -12,12 +12,12 @@ export class CanLoadService implements CanLoad {
 
     canLoad(route: Route) {
         return true;
-        var message = 'Unauthorized access denied';
-        let url = `/${route.path}`;
-        console.log('canLoad ' + url);
-        this._router.navigate(['/home'], { queryParams: { redirectTo: url } });
+        // var message = 'Unauthorized access denied';
+        // let url = `/${route.path}`;
+        // console.log('canLoad ' + url);
+        // this._router.navigate(['/home'], { queryParams: { redirectTo: url } });
         // this.toastService.activate(this.deniedMessage);
-        return false;
+        // return false;
     }
 
 }

@@ -10,9 +10,9 @@ import * as moment from 'moment';
 })
 
 export class FooterComponent implements OnInit {
-    actualYear: number;
+    actualYear: string;
 
     ngOnInit() {
-        this.actualYear = moment().get('year');
+        this.actualYear = moment().format();
     }
 }

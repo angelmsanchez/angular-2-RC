@@ -14,12 +14,6 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'home'
     },
-    // {
-    //     path: 'admin',
-    //     loadChildren: 'app/admin/admin.module#AdminModule',
-    //     canActivate: [AuthGuard],
-    //     canLoad: [AuthGuard]
-    // },
     {
         path: 'home',
         component: HomeComponent
@@ -47,11 +41,13 @@ const routes: Routes = [
         RouterModule.forRoot(routes,
             { preloadingStrategy: PreloadSelectedModulesList }
         )],
-    exports: [RouterModule],
+    exports: [
+        RouterModule
+    ],
     providers: [
         // AuthGuard,
         // CanDeactivateGuard,
-        PreloadSelectedModulesList,
+        PreloadSelectedModulesList
         // UserProfileService
     ]
 })

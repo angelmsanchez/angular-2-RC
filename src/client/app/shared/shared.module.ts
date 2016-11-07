@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent, SpinnerComponent } from './components/index';
 import { ContribService, ExceptionService, AuthService, CanLoadService } from './services/index';
+import { ExponentialStrengthPipe } from './pipes/index';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { ContribService, ExceptionService, AuthService, CanLoadService } from '.
         ContribService,
         ExceptionService,
         AuthService,
-        CanLoadService
+        CanLoadService,
+        ExponentialStrengthPipe
     ]
 })
 
