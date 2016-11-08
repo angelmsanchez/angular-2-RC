@@ -1,0 +1,30 @@
+#toast {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  text-align: center; }
+  #toast .toast-card {
+    width: 100%;
+    z-index: 1;
+    padding: 2px;
+    position: relative;
+    background-color: #ff4081;
+    background-color: #f06292;
+    background-color: #673ab7;
+    background-color: #536dfe;
+    text-align: center;
+    color: white; }
+  #toast .toast-message {
+    margin: 0em 2em 1em 2em; }
+  #toast .toast-title {
+    text-transform: uppercase;
+    margin: 16px;
+    font-size: 18px; }

@@ -7,26 +7,22 @@ import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeModule } from './home/home.module';
-import { SharedModule } from './shared/shared.module';
-import { PomodoroModule } from './pomodoro/pomodoro.module';
-import { VideoClubModule } from './video-club/video-club.module';
 import { InterceptorHttp } from './interceptor.service';
+import { ContribService } from './core/services/contrib.service';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         AppRoutingModule,
-        SharedModule,
-        HomeModule,
-        PomodoroModule,
-        VideoClubModule
+        CoreModule
     ],
     declarations: [
         AppComponent
     ],
     providers: [
+        // ContribService,
         {
             provide: APP_BASE_HREF,
             useValue: '<%= APP_BASE %>'
@@ -39,7 +35,8 @@ import { InterceptorHttp } from './interceptor.service';
             useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, router: Router) =>
                 new InterceptorHttp(backend, defaultOptions, router),
             deps: [XHRBackend, RequestOptions]
-        }],
+        }
+    ],
     bootstrap: [
         AppComponent
     ]

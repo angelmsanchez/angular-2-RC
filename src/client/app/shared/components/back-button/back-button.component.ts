@@ -9,7 +9,6 @@ import { Component, Inject } from '@angular/core';
 
 export class BackButtonComponent {
     public enabledButton: boolean = true;
-    public valueText: string = 'angel';
 
     constructor(
         @Inject(window) private _window: any) {

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// import { AuthGuard, CanDeactivateGuard, UserProfileService } from './core';
 // import { PageNotFoundComponent } from './page-not-found.component';
 import { PreloadSelectedModulesList } from './core/config/index';
-import { HomeComponent } from './home/index';
-import { PomodoroComponent } from './pomodoro/index';
-import { CanLoadService } from './shared/services/index';
+import { CanLoadService, ExceptionService, AuthService } from './core/services/index';
 
 const routes: Routes = [
     {
@@ -16,18 +13,17 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomeComponent
+        loadChildren: 'app/home/home.module#HomeModule'
     },
     {
         path: 'pomodoro',
-        component: PomodoroComponent,
+        loadChildren: 'app/pomodoro/pomodoro.module#PomodoroModule',
         data: { preload: true }
     },
     {
         path: 'video-club',
         loadChildren: 'app/video-club/video-club.module#VideoClubModule',
         canLoad: [CanLoadService]
-
     }
     // {
     //     path: '**',
@@ -40,15 +36,16 @@ const routes: Routes = [
     imports: [
         RouterModule.forRoot(routes,
             { preloadingStrategy: PreloadSelectedModulesList }
-        )],
+        )
+    ],
     exports: [
         RouterModule
     ],
     providers: [
-        // AuthGuard,
-        // CanDeactivateGuard,
-        PreloadSelectedModulesList
-        // UserProfileService
+        PreloadSelectedModulesList,
+        ExceptionService,
+        AuthService,
+        CanLoadService
     ]
 })
 export class AppRoutingModule { }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
-import { Config } from '../config/index';
+import { Config } from './../../shared/config/env.config';
 
 @Injectable()
 export class ContribService {

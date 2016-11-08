@@ -3,38 +3,26 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HeaderComponent, NavbarComponent, FooterComponent, BackButtonComponent, SpinnerComponent } from './components/index';
-import { ContribService, ExceptionService, AuthService, CanLoadService } from './services/index';
+import { BackButtonComponent, SpinnerComponent } from './components/index';
 import { ExponentialStrengthPipe } from './pipes/index';
+import { BackButtondModule } from './components/back-button/back-button.module';
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        // RouterModule,
+        BackButtondModule
     ],
     declarations: [
-        HeaderComponent,
-        NavbarComponent,
-        FooterComponent,
-        BackButtonComponent,
         SpinnerComponent,
         ExponentialStrengthPipe
     ],
     exports: [
         FormsModule,
-        RouterModule,
-        HeaderComponent,
-        NavbarComponent,
-        FooterComponent,
-        BackButtonComponent,
+        // RouterModule,
+        BackButtondModule,
         SpinnerComponent,
         ExponentialStrengthPipe
-    ],
-    providers: [
-        ContribService,
-        ExceptionService,
-        AuthService,
-        CanLoadService
     ]
 })
 
