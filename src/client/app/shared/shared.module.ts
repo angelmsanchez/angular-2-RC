@@ -17,7 +17,8 @@ import { ExponentialStrengthPipe } from './pipes/index';
         NavbarComponent,
         FooterComponent,
         BackButtonComponent,
-        SpinnerComponent
+        SpinnerComponent,
+        ExponentialStrengthPipe
     ],
     exports: [
         FormsModule,
@@ -26,14 +27,14 @@ import { ExponentialStrengthPipe } from './pipes/index';
         NavbarComponent,
         FooterComponent,
         BackButtonComponent,
-        SpinnerComponent
+        SpinnerComponent,
+        ExponentialStrengthPipe
     ],
     providers: [
         ContribService,
         ExceptionService,
         AuthService,
-        CanLoadService,
-        ExponentialStrengthPipe
+        CanLoadService
     ]
 })
 
