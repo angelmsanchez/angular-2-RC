@@ -9,8 +9,8 @@ import { VideoClubRoutingModule } from './video-club.routing.module';
 
 @NgModule({
     imports: [
-        // CommonModule,
-        // SharedModule,
+        CommonModule,
+        SharedModule,
         VideoClubRoutingModule
     ],
     declarations: [
@@ -21,9 +21,9 @@ import { VideoClubRoutingModule } from './video-club.routing.module';
         FilmComponent,
         DetailFilmComponent
     ],
-    // exports: [
-    //     VideoClubComponent
-    // ],
+    exports: [
+        VideoClubComponent
+    ],
     providers: [
         VideoClubService,
         VideoClubResolve,

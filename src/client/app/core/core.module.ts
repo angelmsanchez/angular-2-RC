@@ -31,9 +31,9 @@ import { ContribService } from './services/contrib.service';
         HeaderComponent,
         NavbarComponent,
         FooterComponent
-    ],
-    providers: [
-        ContribService
     ]
+    // providers: [
+    //     ContribService
+    // ]
 })
 export class CoreModule { }

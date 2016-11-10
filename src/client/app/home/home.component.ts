@@ -19,7 +19,8 @@ export class HomeComponent implements OnInit {
 
     constructor(private _router: Router,
         private _contribService: ContribService,
-        private _toastService: ToastService) {
+        // private _toastService: ToastServic
+    ) {
         // ) {
     }
 
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
     private contribComun() {
         this._contribService
             .getContrib('comun')
-            .do(() => this._toastService.activate('prueba angel'))
+            // .do(() => this._toastService.activate('prueba angel'))
             .subscribe((data: any) => {
                 this.headerContent = data;
                 console.log('subscribe contribComun');

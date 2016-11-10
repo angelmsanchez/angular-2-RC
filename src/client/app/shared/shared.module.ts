@@ -10,7 +10,6 @@ import { BackButtondModule } from './components/back-button/back-button.module';
 @NgModule({
     imports: [
         CommonModule,
-        // RouterModule,
         BackButtondModule
     ],
     declarations: [
@@ -19,7 +18,6 @@ import { BackButtondModule } from './components/back-button/back-button.module';
     ],
     exports: [
         FormsModule,
-        // RouterModule,
         BackButtondModule,
         SpinnerComponent,
         ExponentialStrengthPipe

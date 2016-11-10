@@ -22,7 +22,7 @@ import { CoreModule } from './core/core.module';
         AppComponent
     ],
     providers: [
-        // ContribService,
+        ContribService,
         {
             provide: APP_BASE_HREF,
             useValue: '<%= APP_BASE %>'
