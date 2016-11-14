@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
         private _contribService: ContribService,
         // private _toastService: ToastServic
     ) {
+        console.log('constructor home');
         // ) {
     }
 

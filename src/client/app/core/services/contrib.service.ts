@@ -8,6 +8,7 @@ export class ContribService {
     // private _cache: Object = {};
 
     constructor(private _http: Http) {
+        console.log('create Contrib-service');
     }
 
     // getContrib(endPoint: string) {
