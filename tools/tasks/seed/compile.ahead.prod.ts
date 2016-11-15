@@ -24,7 +24,7 @@ export = (done: any) => {
   modifyFile(join(Config.TMP_DIR, 'tsconfig.json'), (content: string) => {
     const parsed = JSON.parse(content);
     parsed.files = parsed.files || [];
-    parsed.files.push(join(Config.BOOTSTRAP_DIR, 'main.ts'));
+    parsed.files.push(join('main.ts'));
     return JSON.stringify(parsed, null, 2);
   });
   const args = argv;
