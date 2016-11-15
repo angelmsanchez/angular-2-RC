@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ToastService } from './../toast/toast.service';
+// import { ToastService } from './../toast/toast.service';
 import { ContribService } from './../../core/services/contrib.service';
 import { Constants } from './../../shared/constants/constants';
 
@@ -16,13 +16,13 @@ export class HeaderComponent implements OnInit {
     public speakers: Object;
 
     constructor(
-        // private _contribService: ContribService,
+        private _contribService: ContribService
         // private _toastService: ToastService) {
     ) {
     }
 
     ngOnInit() {
-        // this.contribComun();
+        this.contribComun();
         this.urlImg = Constants.URL_IMG + 'angularjs-logo.png';
     }
 
@@ -33,11 +33,11 @@ export class HeaderComponent implements OnInit {
         return false;
     }
 
-    // private contribComun() {
-    //     this._contribService
-    //         .getContrib('comun')
-    //         .subscribe((data: any) => this.headerContent = data);
-    //     console.log('header contribComun');
-    // }
+    private contribComun() {
+        this._contribService
+            .getContrib('comun')
+            .subscribe((data: any) => this.headerContent = data);
+        console.log('header contribComun');
+    }
 
 }

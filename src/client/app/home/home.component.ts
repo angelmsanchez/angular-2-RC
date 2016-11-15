@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ContribService } from './../contrib.service';
-
-// import { ContribService } from './../core/services/contrib.service';
+import { ContribService } from './../core/services/contrib.service';
 // import { ToastService } from './../core/toast/toast.service';
 // import * as moment from 'moment';
 
@@ -31,22 +29,22 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         // setTimeout(() => this.activeSpinner = false, 5000);
-        // this.contribComun();
+        this.contribComun();
     }
-
-    // private contribComun() {
-    //     this._contribService
-    //         .getContrib('comun')
-    //         // .do(() => this._toastService.activate('prueba angel'))
-    //         .subscribe((data: any) => {
-    //             this.headerContent = data;
-    //             console.log('subscribe contribComun');
-    //         });
-    //     console.log('home home home contribComun');
-    // }
 
     goTo(endPoint: string) {
         this._router.navigate([endPoint]);
+    }
+
+    private contribComun() {
+        this._contribService
+            .getContrib('comun')
+            // .do(() => this._toastService.activate('prueba angel'))
+            .subscribe((data: any) => {
+                this.headerContent = data;
+                console.log('subscribe contribComun');
+            });
+        console.log('home home home contribComun');
     }
 
 }

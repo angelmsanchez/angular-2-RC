@@ -1,4 +1,3 @@
-import { ContribService } from './contrib.service';
 import { Component } from '@angular/core';
 import { Config } from './shared/index';
 
@@ -8,8 +7,7 @@ import { Config } from './shared/index';
     templateUrl: 'app.component.html',
 })
 export class AppComponent {
-    constructor(private _contribService: ContribService) {
+    constructor() {
         console.log('Environment config', Config);
-        _contribService.getContrib('app-component');
     }
 }
