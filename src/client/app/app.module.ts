@@ -7,8 +7,9 @@ import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContribService } from './contrib.service';
 import { InterceptorHttp } from './interceptor.service';
-import { ContribService } from './core/services/contrib.service';
+// import { ContribService } from './core/services/contrib.service';
 import { CoreModule } from './core/core.module';
 
 @NgModule({

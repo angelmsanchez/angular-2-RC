@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*@import  '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/alerts';*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -2496,76 +2497,6 @@ input:-ms-input-placeholder {
       right: 10px !important; }
     .toast-bottom-right .alert.alert-toastr {
       margin-left: 12px; }
-
-.alert-success {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #007a3d; }
-  .alert-success hr {
-    border-top-color: #c9e2b3; }
-  .alert-success .alert-link {
-    color: #004724; }
-
-.alert-info {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #008386; }
-  .alert-info hr {
-    border-top-color: #a6e1ec; }
-  .alert-info .alert-link {
-    color: #005153; }
-
-.alert-warning {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  color: #ef8900; }
-  .alert-warning hr {
-    border-top-color: #f7e1b5; }
-  .alert-warning .alert-link {
-    color: #bc6c00; }
-
-.alert-error {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #ff0000; }
-  .alert-error hr {
-    border-top-color: #e4b9c0; }
-  .alert-error .alert-link {
-    color: #cc0000; }
-
-.message .alert {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f1f9fd;
-  border: 0;
-  border-radius: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5rem 1rem;
-  position: relative;
-  width: 100%; }
-  @media (max-width: 768px) {
-    .message .alert {
-      display: inherit !important; } }
-  .message .alert .alert-title {
-    color: #ff0000;
-    margin-bottom: 1rem; }
-    @media (min-width: 768px) {
-      .message .alert .alert-title {
-        margin-bottom: 0;
-        padding-left: 2rem; } }
-  .message .alert .alert-content p {
-    color: black;
-    font-size: 0.95rem;
-    margin-bottom: 1rem; }
-  @media (min-width: 768px) {
-    .message .alert .alert-content {
-      border-left: 1px solid #bfbfbf;
-      padding-left: 2rem; } }
-  .message .alert p:last-child {
-    margin-bottom: 0; }
 
 .btn {
   display: inline-block;

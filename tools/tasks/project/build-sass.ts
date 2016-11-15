@@ -14,7 +14,7 @@ let sassOptions: any = {
 
 function processAppStyles() {
     console.log('...Compiling app global styles.');
-    return gulp.src(join(Config.SASS_SRC, 'style.scss'))
+    return gulp.src(join(Config.SCSS_SRC, 'style.scss'))
         .pipe(plugins.sass(sassOptions))
         .pipe(gulp.dest(join(Config.ASSETS_SRC, 'css')));
 }
@@ -23,7 +23,7 @@ function processComponentSass() {
     console.log('...Compiling app components styles.');
     return gulp.src([
         join(Config.APP_SRC, '**', '*.scss'),
-        '!' + join(Config.SASS_SRC, '**', 'style.scss')
+        '!' + join(Config.SCSS_SRC, '**', 'style.scss')
     ])
         .pipe(plugins.sass(sassOptions))
         .pipe(gulp.dest(Config.APP_SRC));
