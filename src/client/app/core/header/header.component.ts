@@ -37,7 +37,6 @@ export class HeaderComponent implements OnInit {
         this._contribService
             .getContrib('comun')
             .subscribe((data: any) => this.headerContent = data);
-        console.log('header contribComun');
     }
 
 }

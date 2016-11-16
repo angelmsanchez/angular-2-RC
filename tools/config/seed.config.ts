@@ -374,7 +374,7 @@ export class SeedConfig {
             'dist/dev/*': '/base/dist/dev/*',
             '*': 'node_modules/*',
 
-            'moment': 'npm:moment/min/moment.min.js',
+            'moment': 'node_modules/moment/moment.js',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
         },
         packages: {

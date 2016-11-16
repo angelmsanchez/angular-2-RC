@@ -29,7 +29,7 @@ export class ContribService {
     getContrib(endPoint: string) {
         return this._http
             .get(Config.API_LOCALHOST + endPoint)
-            .map(response => response.json())
+            .map(response => response.json());
     }
 
 }

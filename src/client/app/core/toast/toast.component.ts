@@ -10,15 +10,14 @@ import { Subscription } from 'rxjs/Subscription'
     styleUrls: ['toast.css']
 })
 export class ToastComponent implements OnDestroy, OnInit {
+    title: string;
+    message: string;
     private defaults = {
         title: '',
         message: 'May the Force be with You'
     };
     private toastElement: any;
     private toastSubscription: Subscription;
-
-    title: string;
-    message: string;
 
     constructor(private _toastService: ToastService) {
         console.log('constructor toasterComponent');

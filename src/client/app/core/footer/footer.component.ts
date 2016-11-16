@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import * as moment from 'moment';
+import * as moment from 'moment';
 
 @Component({
     moduleId: module.id,
@@ -13,7 +13,6 @@ export class FooterComponent implements OnInit {
     actualYear: string;
 
     ngOnInit() {
-        console.log('footer componetn');
-        // this.actualYear = moment().format();
+        this.actualYear = moment().format();
     }
 }
