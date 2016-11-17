@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ToastService } from './toast.service';
 
-import { Subscription } from 'rxjs/Subscription'
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     moduleId: module.id,
@@ -23,7 +23,7 @@ export class ToastComponent implements OnDestroy, OnInit {
         console.log('constructor toasterComponent');
         this.toastSubscription = this._toastService.toastState
             .subscribe((toastMessage) => {
-                console.log(`activiting toast: ${toastMessage.message}`)
+                console.log(`activiting toast: ${toastMessage.message}`);
                 this.activate(toastMessage.message);
             });
     }

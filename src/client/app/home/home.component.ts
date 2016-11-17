@@ -15,13 +15,14 @@ export class HomeComponent implements OnInit {
     public activeSpinner: boolean = true;
 
     constructor(private _router: Router
-        // private _toastService: ToastServic
+        // private _toastService: ToastService
     ) {
-        // ) {
     }
 
     ngOnInit() {
-        setTimeout(() => this.activeSpinner = false, 5000);
+        setTimeout(() => {
+            this.activeSpinner = false;
+        }, 3000);
     }
 
     goTo(endPoint: string) {

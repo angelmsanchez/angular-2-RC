@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
 import { Config } from './../../shared/config/env.config';
+import { ToastService } from './../toast/toast.service';
 
 @Injectable()
 export class ContribService {
     // private _cache: Object = {};
 
-    constructor(private _http: Http) {
-        console.log('create Contrib-service');
+    constructor(private _http: Http,
+        // private _toastService: ToastService
+        ) {
     }
 
     // getContrib(endPoint: string) {
@@ -29,7 +31,10 @@ export class ContribService {
     getContrib(endPoint: string) {
         return this._http
             .get(Config.API_LOCALHOST + endPoint)
-            .map(response => response.json());
+            .map(response => {
+                response.json();
+                // this._toastService.activate('prueba toaster');
+            });
     }
 
 }

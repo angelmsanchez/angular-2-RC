@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "angular-2",
   "version": "0.0.0",
-  "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
+  "description": "Modular starter project for Angular 2",
   "repository": {
-    "url": "https://github.com/mgechev/angular-seed"
+    "url": "https://github.com/angelmsanchez/angular-2-RC"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
@@ -39,11 +39,11 @@
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Angel Muñoz Sanchez",
   "license": "MIT",
   "devDependencies": {
-    "@angular/compiler-cli": "~2.1.2",
-    "@angular/platform-server": "~2.1.2",
+    "@angular/compiler-cli": "~2.2.0",
+    "@angular/platform-server": "~2.2.0",
     "@angular/tsc-wrapped": "0.3.0",
     "@types/async": "^2.0.32",
     "@types/browser-sync": "^0.0.34",
@@ -126,15 +126,16 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
-    "@angular/common": "~2.1.2",
-    "@angular/compiler": "~2.1.2",
-    "@angular/core": "~2.1.2",
-    "@angular/forms": "~2.1.2",
-    "@angular/http": "~2.1.2",
-    "@angular/platform-browser": "~2.1.2",
-    "@angular/platform-browser-dynamic": "~2.1.2",
-    "@angular/router": "~3.1.2",
+    "@angular/common": "~2.2.0",
+    "@angular/compiler": "~2.2.0",
+    "@angular/core": "~2.2.0",
+    "@angular/forms": "~2.2.0",
+    "@angular/http": "~2.2.0",
+    "@angular/platform-browser": "~2.2.0",
+    "@angular/platform-browser-dynamic": "~2.2.0",
+    "@angular/router": "~3.2.0",
     "@types/moment": "^2.13.0",
+    "angular-in-memory-web-api": "~0.1.15",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "core-js": "^2.4.1",
@@ -146,6 +147,6 @@
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.40",
-    "zone.js": "0.6.25"
+    "zone.js": "0.6.26"
   }
 }

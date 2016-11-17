@@ -348,7 +348,6 @@ export class SeedConfig {
     SYSTEM_CONFIG_DEV: any = {
         defaultJSExtensions: true,
         paths: {
-            'npm:': 'node_modules/',
             [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
             '@angular/common': 'node_modules/@angular/common/bundles/common.umd.js',
             '@angular/compiler': 'node_modules/@angular/compiler/bundles/compiler.umd.js',
@@ -375,7 +374,8 @@ export class SeedConfig {
             '*': 'node_modules/*',
 
             'moment': 'node_modules/moment/moment.js',
-            'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+            'ng2-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
+            'angular-in-memory-web-api': 'node_modules/angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
         },
         packages: {
         }

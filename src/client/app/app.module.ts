@@ -5,18 +5,23 @@ import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 import { Router } from '@angular/router';
 import 'rxjs/Rx';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InterceptorHttp } from './interceptor.service';
 import { ContribService } from './core/services/contrib.service';
 import { CoreModule } from './core/core.module';
+import { InMemoryStoreService } from '../api/in-memory-store.service';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         AppRoutingModule,
-        CoreModule
+        CoreModule,
+        // InMemoryWebApiModule.forRoot(InMemoryStoreService, { delay: 1000 }),
+
     ],
     declarations: [
         AppComponent
