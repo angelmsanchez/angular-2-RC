@@ -1,72 +1,12 @@
 @import '../../../scss/vars';
 @import '../../../scss/core/mixins/flex';
-footer#mainFooter {
+#mainFooter {
     background-color: $brand-primary-dark;
     position: relative;
     bottom: 0px;
     color: $color-white;
     padding-bottom: 2rem;
     padding-top: 2rem;
-    ul {
-        li {
-            a {
-                color: #ffffff;
-                &:hover {
-                    color: #e5e5e5;
-                }
-            }
-        }
-    }
-    .logo-footer {
-        display: block;
-        height: 40px;
-        margin-bottom: 2rem;
-        overflow: hidden;
-        width: 110px;
-    }
-    .menu-footer {
-        margin-bottom: 3rem;
-        .clearfix.visible-md-block {
-            margin-bottom: 2rem;
-        }
-        ul {
-            li {
-                font-size: 0.84rem;
-                line-height: 20px;
-                margin-bottom: 0.5rem;
-                &.menu-title {
-                    font-size: 0.9rem;
-                    font-weight: bold;
-                    margin-bottom: 1rem;
-                }
-            }
-        }
-    }
-    .social-media {
-        margin-bottom: 2rem;
-        ul {
-            li {
-                display: inline-block;
-                margin-right: 0.25rem;
-                &:last-child {
-                    margin-right: 0;
-                }
-                a {
-                    &:hover {
-                        text-decoration: none;
-                        opacity: 0.9;
-                    }
-                    i {
-                        background-color: #fff;
-                        border-radius: 50%;
-                        color: #0079c8;
-                        font-size: 1.25rem;
-                        padding: 8px;
-                    }
-                }
-            }
-        }
-    }
     .legal-footer {
         font-size: 0.8rem;
         ul {

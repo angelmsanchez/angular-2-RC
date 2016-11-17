@@ -8,8 +8,8 @@ export interface ToastMessage {
 
 @Injectable()
 export class ToastService {
+    toastSubject = new Subject<ToastMessage>();
     toastState = this.toastSubject.asObservable();
-    private toastSubject = new Subject<ToastMessage>();
 
     constructor( @Optional() @SkipSelf() prior: ToastService) {
         if (prior) {

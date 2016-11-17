@@ -20,10 +20,9 @@ export class ToastComponent implements OnDestroy, OnInit {
     private toastSubscription: Subscription;
 
     constructor(private _toastService: ToastService) {
-        console.log('constructor toasterComponent');
         this.toastSubscription = this._toastService.toastState
             .subscribe((toastMessage) => {
-                console.log(`activiting toast: ${toastMessage.message}`);
+                // console.log(`activiting toast: ${toastMessage.message}`);
                 this.activate(toastMessage.message);
             });
     }
@@ -43,10 +42,9 @@ export class ToastComponent implements OnDestroy, OnInit {
     }
 
     private show() {
-        console.log(this.message);
+        // console.log(this.message);
         this.toastElement.style.opacity = 1;
         this.toastElement.style.zIndex = 9999;
-        console.log('prueba private show toast');
         window.setTimeout(() => this.hide(), 2500);
     }
 
