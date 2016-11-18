@@ -3,12 +3,15 @@ import { Http, ConnectionBackend, RequestOptions, Request, RequestOptionsArgs, R
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
+import { ToastService } from './core/toast/toast.service';
+
 @Injectable()
 export class InterceptorHttp extends Http {
 
     constructor(backend: ConnectionBackend,
         defaultOptions: RequestOptions,
-        private _router: Router) {
+        router: Router,
+        toastService: ToastService) {
         super(backend, defaultOptions);
     }
 
@@ -17,8 +20,9 @@ export class InterceptorHttp extends Http {
             .request(url, options)
             .catch((error: Response) => {
                 console.log('catch request');
+                // this._toastService.activate('Error Service: ' + error);
+                // this._router.navigate(['/pomodoro']);
                 return Observable.throw(error.json().error || 'Server error');
-                // this._router.navigate(['']);
             });
     }
 }

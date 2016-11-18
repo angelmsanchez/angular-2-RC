@@ -21,7 +21,6 @@ export class ToastService {
     }
 
     activate(message?: string) {
-        console.log('activate ToastService: ' + message);
         this.toastSubject.next(<ToastMessage>{ message: message });
     }
 }

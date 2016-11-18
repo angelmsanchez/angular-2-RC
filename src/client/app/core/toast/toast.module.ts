@@ -5,18 +5,18 @@ import { ToastComponent } from './toast.component';
 import { ToastService } from './toast.service';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    ToastComponent
-  ],
-  declarations: [
-    ToastComponent
-  ],
-  providers: [
-    ToastService
-  ]
+    imports: [
+        CommonModule
+    ],
+    exports: [
+        ToastComponent
+    ],
+    declarations: [
+        ToastComponent
+    ],
+    providers: [
+        ToastService
+    ]
 })
 
 export class ToastModule { }

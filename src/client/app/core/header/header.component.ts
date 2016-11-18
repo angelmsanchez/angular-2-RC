@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { ToastService } from './../toast/toast.service';
 import { ContribService } from './../../core/services/contrib.service';
 import { Constants } from './../../shared/constants/constants';
 
@@ -16,9 +15,7 @@ export class HeaderComponent implements OnInit {
     public speakers: Object;
 
     constructor(
-        private _contribService: ContribService
-        // private _toastService: ToastService) {
-    ) {
+        private _contribService: ContribService) {
     }
 
     ngOnInit() {
