@@ -31,4 +31,8 @@ export class CounterComponent {
     decrement() {
         this.store.dispatch(CounterActions.decrement());
     }
+
+    restart() {
+        this.store.dispatch(CounterActions.restart());
+    }
 }

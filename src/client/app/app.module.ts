@@ -16,6 +16,7 @@ import { ToastService } from './core/toast/toast.service';
 import { AppStore } from './redux/app-store';
 import { counterReducer } from './redux/counter-reducer';
 
+//This is for the extension Chrome
 let devtools: StoreEnhancer<AppState> = window['devToolsExtension'] ? window['devToolsExtension']() : f => f;
 
 let store: Store<AppState> = createStore<AppState>(
@@ -40,10 +41,10 @@ let store: Store<AppState> = createStore<AppState>(
             provide: APP_BASE_HREF,
             useValue: '<%= APP_BASE %>'
         },
-        // {
-        //     provide: window,
-        //     useValue: window
-        // },
+        {
+            provide: window,
+            useValue: window
+        },
         {
             provide: Http,
             useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, router: Router, toastservice: ToastService) =>

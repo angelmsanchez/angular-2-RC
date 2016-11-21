@@ -2,19 +2,23 @@
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
             <div class="caption">
-                <h3>Counter</h3>
-                <p>Custom Store</p>
+                <h3>Contador Redux:</h3>
                 <p>
-                    The counter value is:
+                    El valor del contador es:
                     <b>{{ counter }}</b>
                 </p>
                 <p>
                     <button (click)="increment()" class="btn btn-primary">
-                Increment
-              </button>
+                        Incrementar
+                    </button>
                     <button (click)="decrement()" class="btn btn-default">
-                 Decrement
-              </button>
+                        Desincrementar
+                    </button>
+                </p>
+                <p>
+                    <button (click)="restart()">
+                        Restablecer valores
+                    </button>
                 </p>
             </div>
         </div>
