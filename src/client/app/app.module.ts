@@ -1,4 +1,3 @@
-import { AppState } from './redux/app-state';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF } from '@angular/common';
@@ -15,7 +14,9 @@ import { CoreModule } from './core/core.module';
 import { ToastService } from './core/toast/toast.service';
 import { AppStore } from './redux/app-store';
 import { counterReducer } from './redux/counter-reducer';
+import { VideoClubService } from './video-club/services/video-club.service';
 
+import { AppState } from './redux/app-state';
 //This is for the extension Chrome
 let devtools: StoreEnhancer<AppState> = window['devToolsExtension'] ? window['devToolsExtension']() : f => f;
 
@@ -37,6 +38,7 @@ let store: Store<AppState> = createStore<AppState>(
     ],
     providers: [
         ContribService,
+        VideoClubService,
         {
             provide: APP_BASE_HREF,
             useValue: '<%= APP_BASE %>'

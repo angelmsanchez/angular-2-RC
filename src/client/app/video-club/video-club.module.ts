@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
 import { VideoClubComponent } from './video-club.component';
-import { VideoClubService, VideoClubResolve, VideoClubActivate } from './services/index';
+import { VideoClubResolve, VideoClubActivate } from './services/index';
 import { CatalogGenreComponent, GenreComponent, CatalogFilmComponent, FilmComponent, DetailFilmComponent } from './features/index';
 import { VideoClubRoutingModule } from './video-club.routing.module';
 
@@ -25,7 +25,6 @@ import { VideoClubRoutingModule } from './video-club.routing.module';
         VideoClubComponent
     ],
     providers: [
-        VideoClubService,
         VideoClubResolve,
         VideoClubActivate
     ]
