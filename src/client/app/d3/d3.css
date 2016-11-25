@@ -1,0 +1,12 @@
+#d3 g {
+  font: 12px Arial; }
+  #d3 g path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none; }
+  #d3 g .axis path,
+  #d3 g .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges; }

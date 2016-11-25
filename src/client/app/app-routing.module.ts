@@ -24,6 +24,10 @@ const routes: Routes = [
         path: 'video-club',
         loadChildren: 'app/video-club/video-club.module#VideoClubModule',
         canLoad: [CanLoadService]
+    },
+    {
+        path: 'd3',
+        loadChildren: 'app/d3/d3.module#D3Module'
     }
     // {
     //     path: '**',

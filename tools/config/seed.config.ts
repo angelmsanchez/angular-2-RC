@@ -376,8 +376,7 @@ export class SeedConfig {
             'moment': 'node_modules/moment/moment.js',
             'ng2-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
             'angular-in-memory-web-api': 'node_modules/angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-            'redux': 'node_modules/redux/dist/redux.min.js',
-            'd3': 'node_modules/d3/build/d3.min.js'
+            'redux': 'node_modules/redux/dist/redux.min.js'
         },
         packages: {
         }
