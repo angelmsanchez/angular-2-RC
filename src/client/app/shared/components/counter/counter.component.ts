@@ -8,7 +8,8 @@ import * as CounterActions from './../../../redux/counter-action-creators';
 @Component({
     moduleId: module.id,
     selector: 'app-counter',
-    templateUrl: 'counter.html'
+    templateUrl: 'counter.html',
+    styleUrls: ['counter.css']
 
 })
 export class CounterComponent {
