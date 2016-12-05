@@ -1,7 +1,7 @@
 {
     "build.dev": [
-        "clean.once",
         "build-sass",
+        "clean.once",
         "build.assets.dev",
         "build.html_css",
         "build.js.dev",

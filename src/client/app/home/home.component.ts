@@ -6,8 +6,7 @@ import { ToastService } from './../core/toast/toast.service';
 @Component({
     moduleId: module.id,
     selector: 'app-home',
-    templateUrl: 'home.html',
-    styleUrls: ['home.css']
+    templateUrl: 'home.html'
 })
 
 export class HomeComponent implements OnInit {

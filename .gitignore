@@ -14,13 +14,19 @@ lib-cov
 coverage
 coverage_js
 
+# ignore documentation
+documentation
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
-dist
 typings
 ts-node
 
@@ -34,11 +40,12 @@ ts-node
 *.iml
 
 /tools/**/*.js
+dist
+dev
 docs
 lib
 test
 tmp
-/src/client/app/**/*.css
 
 gulpfile.js
 gulpfile.js.map
